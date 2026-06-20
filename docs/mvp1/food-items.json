@@ -1,0 +1,1494 @@
+{
+  "version": "1.0.0",
+  "source": "Exchange list (vegetarian/vegan-focused), adapted for portion-exchange nutrition app MVP1",
+  "items": [
+    {
+      "id": "grain-arroz-blanco",
+      "name": "Arroz cocido integral/blanco",
+      "category": "GRAIN",
+      "portionQuantity": "1/3",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-cereal-alto-fibra",
+      "name": "Cereal alto en fibra",
+      "category": "GRAIN",
+      "portionQuantity": "3/4",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-cereal-crudo",
+      "name": "Cereal crudo (avena, linaza, afrecho, cebada, germen de trigo)",
+      "category": "GRAIN",
+      "portionQuantity": "3",
+      "portionUnit": "cdas",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-cereal-hojuelas",
+      "name": "Cereal en hojuelas",
+      "category": "GRAIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-cuscus",
+      "name": "Cuscús cocido",
+      "category": "GRAIN",
+      "portionQuantity": "1/3",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-gallo-pinto",
+      "name": "Gallo pinto",
+      "category": "GRAIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-granola-baja-grasa",
+      "name": "Granola baja en grasa",
+      "category": "GRAIN",
+      "portionQuantity": "1/4",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-harina-masa",
+      "name": "Harina/masa",
+      "category": "GRAIN",
+      "portionQuantity": "3",
+      "portionUnit": "cdas",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-humus",
+      "name": "Humus",
+      "category": "GRAIN",
+      "portionQuantity": "1/3",
+      "portionUnit": "taza (+1 grasa)",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-pasta-cocida",
+      "name": "Pasta cocida",
+      "category": "GRAIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-canelon",
+      "name": "Canelón",
+      "category": "GRAIN",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-bagel",
+      "name": "Bagel",
+      "category": "GRAIN",
+      "portionQuantity": "1/4",
+      "portionUnit": "(1oz)",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-english-muffin",
+      "name": "English muffin",
+      "category": "GRAIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-baguette",
+      "name": "Baguette",
+      "category": "GRAIN",
+      "portionQuantity": "5",
+      "portionUnit": "cm",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-bollito-pequeno",
+      "name": "Bollito pequeño",
+      "category": "GRAIN",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-cuadrado-light",
+      "name": "Cuadrado 0%/Light",
+      "category": "GRAIN",
+      "portionQuantity": "2",
+      "portionUnit": "tajadas",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-cuadrado-integral",
+      "name": "Cuadrado integral/Blanco",
+      "category": "GRAIN",
+      "portionQuantity": "1",
+      "portionUnit": "tajada",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-hamburguesa-hotdog",
+      "name": "Pan hamburguesa / hot dog",
+      "category": "GRAIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "(1oz)",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-pan-pita",
+      "name": "Pan pita (15cm)",
+      "category": "GRAIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-pan-thins",
+      "name": "Pan Thins integral",
+      "category": "GRAIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-pancake-waffle",
+      "name": "Pancake / Waffle (10cm)",
+      "category": "GRAIN",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-tortilla-maiz-casera",
+      "name": "Tortilla maíz casera",
+      "category": "GRAIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-tortilla-maiz-delgada",
+      "name": "Tortilla maíz delgadas",
+      "category": "GRAIN",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-tortilla-trigo",
+      "name": "Tortilla trigo (15cm)",
+      "category": "GRAIN",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-arepa-maiz",
+      "name": "Arepa de maíz",
+      "category": "GRAIN",
+      "portionQuantity": "40",
+      "portionUnit": "g",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-arracache",
+      "name": "Arracache",
+      "category": "GRAIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-ayote-sazon-calabaza",
+      "name": "Ayote sazón / calabaza",
+      "category": "GRAIN",
+      "portionQuantity": "3/4",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-camote-platano",
+      "name": "Camote / Plátano",
+      "category": "GRAIN",
+      "portionQuantity": "1/3",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-elote-maiz-dulce",
+      "name": "Elote / maíz dulce",
+      "category": "GRAIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "unidad o 1/2 taza",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-papa-cascara",
+      "name": "Papa con cáscara",
+      "category": "GRAIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-pejibaye-pequeno",
+      "name": "Pejibaye pequeño",
+      "category": "GRAIN",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-pure-papa",
+      "name": "Puré de papa",
+      "category": "GRAIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-yuca",
+      "name": "Yuca",
+      "category": "GRAIN",
+      "portionQuantity": "1/3",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-crotones",
+      "name": "Crotones",
+      "category": "GRAIN",
+      "portionQuantity": "1",
+      "portionUnit": "taza (+1 grasa)",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-galletas-arroz",
+      "name": "Galletas de arroz (10cm)",
+      "category": "GRAIN",
+      "portionQuantity": "2",
+      "portionUnit": "unidades",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-galleta-soda-maria",
+      "name": "Galleta soda / María / Salmas",
+      "category": "GRAIN",
+      "portionQuantity": "1",
+      "portionUnit": "paquete",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-palomitas-sin-grasa",
+      "name": "Palomitas sin grasa",
+      "category": "GRAIN",
+      "portionQuantity": "2",
+      "portionUnit": "tazas reventadas",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-papas-tostadas",
+      "name": "Papas tostadas",
+      "category": "GRAIN",
+      "portionQuantity": "8",
+      "portionUnit": "unidades (+1 grasa)",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "grain-queque-seco",
+      "name": "Queque seco",
+      "category": "GRAIN",
+      "portionQuantity": "1",
+      "portionUnit": "tajada delgada (+1 grasa)",
+      "caloriesPerPortion": 80
+    },
+    {
+      "id": "fruit-albaricoques",
+      "name": "Albaricoques",
+      "category": "FRUIT",
+      "portionQuantity": "3",
+      "portionUnit": "unidades",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-anona",
+      "name": "Anona",
+      "category": "FRUIT",
+      "portionQuantity": "1/2",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-arandanos",
+      "name": "Arándanos",
+      "category": "FRUIT",
+      "portionQuantity": "3/4",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-banano",
+      "name": "Banano",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-cas",
+      "name": "Cas",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "peq o 1 gde",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-cerezas-frescas",
+      "name": "Cerezas frescas",
+      "category": "FRUIT",
+      "portionQuantity": "12",
+      "portionUnit": "unidades",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-ciruela-fresca",
+      "name": "Ciruela fresca",
+      "category": "FRUIT",
+      "portionQuantity": "2",
+      "portionUnit": "peq",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-coctel-frutas-sirope",
+      "name": "Cóctel de frutas s/ sirope",
+      "category": "FRUIT",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-ensalada-frutas",
+      "name": "Ensalada de frutas",
+      "category": "FRUIT",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-frambuesas",
+      "name": "Frambuesas",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-fresas",
+      "name": "Fresas",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-granadilla",
+      "name": "Granadilla",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-guanabana",
+      "name": "Guanábana",
+      "category": "FRUIT",
+      "portionQuantity": "3/4",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-guayaba",
+      "name": "Guayaba",
+      "category": "FRUIT",
+      "portionQuantity": "2",
+      "portionUnit": "peq o 1/2 gde",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-jocote",
+      "name": "Jocote",
+      "category": "FRUIT",
+      "portionQuantity": "5",
+      "portionUnit": "unidades",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-kiwi",
+      "name": "Kiwi",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-limon-dulce",
+      "name": "Limón dulce",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-mamon-chino",
+      "name": "Mamón chino",
+      "category": "FRUIT",
+      "portionQuantity": "25",
+      "portionUnit": "unidades",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-mamon-criollo",
+      "name": "Mamón criollo",
+      "category": "FRUIT",
+      "portionQuantity": "20",
+      "portionUnit": "unidades",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-mandarina",
+      "name": "Mandarina",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-mango",
+      "name": "Mango en trozos",
+      "category": "FRUIT",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-manzana",
+      "name": "Manzana",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-manzana-agua",
+      "name": "Manzana de agua",
+      "category": "FRUIT",
+      "portionQuantity": "2",
+      "portionUnit": "unidades",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-melocoton",
+      "name": "Melocotón",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-melon",
+      "name": "Melón",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-mora",
+      "name": "Mora",
+      "category": "FRUIT",
+      "portionQuantity": "3/4",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-naranja",
+      "name": "Naranja",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-nectarina",
+      "name": "Nectarina",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-papaya",
+      "name": "Papaya",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-pera",
+      "name": "Pera",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-pina",
+      "name": "Piña",
+      "category": "FRUIT",
+      "portionQuantity": "3/4",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-sandia",
+      "name": "Sandía",
+      "category": "FRUIT",
+      "portionQuantity": "1 1/4",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-toronja",
+      "name": "Toronja",
+      "category": "FRUIT",
+      "portionQuantity": "1/2",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-uvas",
+      "name": "Uvas",
+      "category": "FRUIT",
+      "portionQuantity": "17",
+      "portionUnit": "unidades",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-uchuvas",
+      "name": "Uchuvas",
+      "category": "FRUIT",
+      "portionQuantity": "8",
+      "portionUnit": "unidades o 17 peq",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-zapote",
+      "name": "Zapote",
+      "category": "FRUIT",
+      "portionQuantity": "1/2",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-albaricoques-secos",
+      "name": "Albaricoques secos",
+      "category": "FRUIT",
+      "portionQuantity": "8",
+      "portionUnit": "mitades",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-ciruela-datiles",
+      "name": "Ciruela / Dátiles",
+      "category": "FRUIT",
+      "portionQuantity": "3",
+      "portionUnit": "unidades",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-higos",
+      "name": "Higos",
+      "category": "FRUIT",
+      "portionQuantity": "1 1/2",
+      "portionUnit": "unidades",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-pasas-arandanos-secos",
+      "name": "Pasas / arándanos secos",
+      "category": "FRUIT",
+      "portionQuantity": "2",
+      "portionUnit": "cdas",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-jugo-manzana-naranja",
+      "name": "Jugo manzana / naranja",
+      "category": "FRUIT",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-jugo-toronja-pina-naranja",
+      "name": "Jugo toronja / piña / naranja",
+      "category": "FRUIT",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-jugo-nectar-light",
+      "name": "Jugo o néctar Light",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-agua-pipa",
+      "name": "Agua de pipa",
+      "category": "FRUIT",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "fruit-jugo-uva-ciruela-cranberry",
+      "name": "Jugo uva / ciruela / cranberry",
+      "category": "FRUIT",
+      "portionQuantity": "1/3",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 60
+    },
+    {
+      "id": "vegetable-alcachofa",
+      "name": "Alcachofa",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza cocida",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-apio",
+      "name": "Apio",
+      "category": "VEGETABLE",
+      "portionQuantity": "1",
+      "portionUnit": "taza cruda",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-ayote-tierno",
+      "name": "Ayote tierno",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza cocido",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-berenjena",
+      "name": "Berenjena",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza cocida",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-brocoli",
+      "name": "Brócoli",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza cocido",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-cebolla",
+      "name": "Cebolla",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-col-bruselas",
+      "name": "Col de Bruselas",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza cocida",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-col-rizada-kale",
+      "name": "Col rizada o kale",
+      "category": "VEGETABLE",
+      "portionQuantity": "1",
+      "portionUnit": "taza cruda",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-coliflor",
+      "name": "Coliflor",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza cocida",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-chayote",
+      "name": "Chayote",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza cocido",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-chile-dulce",
+      "name": "Chile dulce",
+      "category": "VEGETABLE",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-elotitos-pepinillos",
+      "name": "Elotitos / pepinillos encurtidos",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-esparragos",
+      "name": "Espárragos",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza cocidos",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-espinaca-hojas-verdes",
+      "name": "Espinaca y hojas verdes",
+      "category": "VEGETABLE",
+      "portionQuantity": "1",
+      "portionUnit": "taza cruda",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-frijol-nacido",
+      "name": "Frijol nacido (germinado)",
+      "category": "VEGETABLE",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-hojas-mostaza-china-bokchoy",
+      "name": "Hojas de mostaza china / Bok choy",
+      "category": "VEGETABLE",
+      "portionQuantity": "1",
+      "portionUnit": "taza cruda",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-hongos",
+      "name": "Hongos",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-jugo-vegetales",
+      "name": "Jugo de vegetales",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-lechuga",
+      "name": "Lechuga",
+      "category": "VEGETABLE",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-palmito",
+      "name": "Palmito",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-pepino",
+      "name": "Pepino",
+      "category": "VEGETABLE",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-puerros",
+      "name": "Puerros",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza cocidos",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-rabano",
+      "name": "Rábano",
+      "category": "VEGETABLE",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-remolacha",
+      "name": "Remolacha",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza cocida",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-repollo",
+      "name": "Repollo",
+      "category": "VEGETABLE",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-tomate",
+      "name": "Tomate: crudo, enlatado, jugo",
+      "category": "VEGETABLE",
+      "portionQuantity": "1",
+      "portionUnit": "taza / unidad",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-vainicas",
+      "name": "Vainicas",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza cocidas",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-zanahoria",
+      "name": "Zanahoria",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-zapallo",
+      "name": "Zapallo",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza cocido",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "vegetable-zucchini",
+      "name": "Zucchini",
+      "category": "VEGETABLE",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza cocido",
+      "caloriesPerPortion": 25
+    },
+    {
+      "id": "dairy-leche-arroz",
+      "name": "Leche de arroz",
+      "category": "DAIRY",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-leche-avena",
+      "name": "Leche de avena",
+      "category": "DAIRY",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-leche-soya",
+      "name": "Leche de soya",
+      "category": "DAIRY",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-leche-avena-con-azucar",
+      "name": "Leche de avena (<7g azúcar)",
+      "category": "DAIRY",
+      "portionQuantity": "3/4",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-leche-quinoa-con-azucar",
+      "name": "Leche de quinoa (<7g azúcar)",
+      "category": "DAIRY",
+      "portionQuantity": "3/4",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-leche-soya-con-azucar",
+      "name": "Leche de soya (<7g azúcar)",
+      "category": "DAIRY",
+      "portionQuantity": "3/4",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-leche-soya-polvo",
+      "name": "Leche de soya en polvo",
+      "category": "DAIRY",
+      "portionQuantity": "4",
+      "portionUnit": "cdas",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-yogurt-soya",
+      "name": "Yogurt de soya",
+      "category": "DAIRY",
+      "portionQuantity": "2/3",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-yogurt-maranon-coco",
+      "name": "Yogurt de marañón o coco",
+      "category": "DAIRY",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza (+1 grasa)",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-queso-rallado-vegano",
+      "name": "Queso rallado vegano",
+      "category": "DAIRY",
+      "portionQuantity": "28",
+      "portionUnit": "g o 1/4 taza",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-queso-vegano",
+      "name": "Queso vegano",
+      "category": "DAIRY",
+      "portionQuantity": "1",
+      "portionUnit": "rebanada o 30 g",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-helado-leche-coco",
+      "name": "Helado vegano de leche de coco",
+      "category": "DAIRY",
+      "portionQuantity": "1/4",
+      "portionUnit": "taza (+1 grasa)",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-leche-vaca-descremada",
+      "name": "Leche de vaca descremada",
+      "category": "DAIRY",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-leche-vaca-2",
+      "name": "Leche de vaca 2%",
+      "category": "DAIRY",
+      "portionQuantity": "3/4",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-yogurt-natural-light",
+      "name": "Yogurt natural / Light sin azúcar",
+      "category": "DAIRY",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-yogurt-griego",
+      "name": "Yogurt griego",
+      "category": "DAIRY",
+      "portionQuantity": "2/3",
+      "portionUnit": "taza (+1 proteína)",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-helado-light",
+      "name": "Helados Light",
+      "category": "DAIRY",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza (+1 grasa)",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "dairy-leche-polvo-descremada",
+      "name": "Leche en polvo descremada",
+      "category": "DAIRY",
+      "portionQuantity": "3",
+      "portionUnit": "cdas",
+      "caloriesPerPortion": 90
+    },
+    {
+      "id": "protein-avena-integral",
+      "name": "Avena integral",
+      "category": "PROTEIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza (+1 harina)",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-edamame-hervido",
+      "name": "Edamame hervido",
+      "category": "PROTEIN",
+      "portionQuantity": "1/3",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-edamame-tostado",
+      "name": "Edamame tostado",
+      "category": "PROTEIN",
+      "portionQuantity": "1/4",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-espinaca-cocida",
+      "name": "Espinaca cocida",
+      "category": "PROTEIN",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-frijoles-lentejas-garbanzos",
+      "name": "Frijoles, lentejas, garbanzos",
+      "category": "PROTEIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-huevo-vegano",
+      "name": "Huevo vegano",
+      "category": "PROTEIN",
+      "portionQuantity": "4",
+      "portionUnit": "cdas (+1 harina)",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-jamon-soya",
+      "name": "Jamón de soya",
+      "category": "PROTEIN",
+      "portionQuantity": "2",
+      "portionUnit": "tajadas",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-kale-cocida",
+      "name": "Kale cocida",
+      "category": "PROTEIN",
+      "portionQuantity": "3",
+      "portionUnit": "tazas",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-proteina-vegana-polvo",
+      "name": "Proteína vegana en polvo",
+      "category": "PROTEIN",
+      "portionQuantity": "1",
+      "portionUnit": "scoop ó 1/4 taza",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-quinoa-cocida",
+      "name": "Quinoa cocida",
+      "category": "PROTEIN",
+      "portionQuantity": "2/3",
+      "portionUnit": "taza (+1 harina)",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-semillas-ayote-tostadas",
+      "name": "Semillas de ayote tostadas",
+      "category": "PROTEIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-tempeh",
+      "name": "Tempeh",
+      "category": "PROTEIN",
+      "portionQuantity": "1/4",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-tofu",
+      "name": "Tofu",
+      "category": "PROTEIN",
+      "portionQuantity": "1/3",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-torta-soya",
+      "name": "Torta de soya",
+      "category": "PROTEIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "torta",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-falafel",
+      "name": "Falafel",
+      "category": "PROTEIN",
+      "portionQuantity": "1",
+      "portionUnit": "un (0.6 oz)",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-claras-huevo",
+      "name": "Claras de huevo",
+      "category": "PROTEIN",
+      "portionQuantity": "2",
+      "portionUnit": "unidades",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-almendras-mani-maranon-pistachos",
+      "name": "Almendras, maní, marañón, pistachos",
+      "category": "PROTEIN",
+      "portionQuantity": "1/4",
+      "portionUnit": "taza (+2 grasas)",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-chorizo-soya",
+      "name": "Chorizo de soya",
+      "category": "PROTEIN",
+      "portionQuantity": "1/4",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-chorizo-molido-carne-vegana",
+      "name": "Chorizo molido o carne molida vegana",
+      "category": "PROTEIN",
+      "portionQuantity": "1/3",
+      "portionUnit": "taza o 55 g",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-linaza-chia",
+      "name": "Linaza / Chía",
+      "category": "PROTEIN",
+      "portionQuantity": "2",
+      "portionUnit": "cdas (+1 grasa)",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-mantequilla-maranon-almendra",
+      "name": "Mantequilla de marañón o almendra",
+      "category": "PROTEIN",
+      "portionQuantity": "2",
+      "portionUnit": "cdas (+2 grasas)",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-salchicha-soya",
+      "name": "Salchicha de soya estilo Brats",
+      "category": "PROTEIN",
+      "portionQuantity": "1",
+      "portionUnit": "oz ó 1/3 unidad",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-salchicha-hotdog-vegana",
+      "name": "Salchicha para hot dog vegana",
+      "category": "PROTEIN",
+      "portionQuantity": "1/2",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-seitan",
+      "name": "Seitan",
+      "category": "PROTEIN",
+      "portionQuantity": "40",
+      "portionUnit": "g (+1/3 harina)",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-semillas-canamo-girasol",
+      "name": "Semillas de cáñamo / hemp",
+      "category": "PROTEIN",
+      "portionQuantity": "2",
+      "portionUnit": "cdas (+2 grasas)",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-semillas-girasol",
+      "name": "Semillas de girasol",
+      "category": "PROTEIN",
+      "portionQuantity": "2",
+      "portionUnit": "cdas (+2 grasas)",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-tahini",
+      "name": "Tahini",
+      "category": "PROTEIN",
+      "portionQuantity": "2",
+      "portionUnit": "cdas (+2 grasas)",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-huevo-entero",
+      "name": "Huevo entero",
+      "category": "PROTEIN",
+      "portionQuantity": "1",
+      "portionUnit": "unidad",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-queso-parmesano",
+      "name": "Queso Parmesano",
+      "category": "PROTEIN",
+      "portionQuantity": "2",
+      "portionUnit": "cdas",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-queso-turrialba-palmito",
+      "name": "Queso Turrialba, Palmito, Provolone",
+      "category": "PROTEIN",
+      "portionQuantity": "1",
+      "portionUnit": "tajada",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "protein-queso-blanco-rallado",
+      "name": "Queso blanco rallado",
+      "category": "PROTEIN",
+      "portionQuantity": "1/4",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 55
+    },
+    {
+      "id": "fat-aceites",
+      "name": "Aceites (coco, oliva extra virgen)",
+      "category": "FAT",
+      "portionQuantity": "1",
+      "portionUnit": "cdta",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-aceitunas",
+      "name": "Aceitunas",
+      "category": "FAT",
+      "portionQuantity": "8",
+      "portionUnit": "unidades",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-aderezo-ensalada",
+      "name": "Aderezo para ensalada",
+      "category": "FAT",
+      "portionQuantity": "1",
+      "portionUnit": "cda",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-aderezo-ensalada-light",
+      "name": "Aderezo para ensalada Light",
+      "category": "FAT",
+      "portionQuantity": "2",
+      "portionUnit": "cdas",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-aguacate",
+      "name": "Aguacate",
+      "category": "FAT",
+      "portionQuantity": "1/4",
+      "portionUnit": "un o 2 cdas",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-chia",
+      "name": "Chía",
+      "category": "FAT",
+      "portionQuantity": "1",
+      "portionUnit": "cda",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-linaza",
+      "name": "Linaza",
+      "category": "FAT",
+      "portionQuantity": "1",
+      "portionUnit": "cda",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-mani",
+      "name": "Maní",
+      "category": "FAT",
+      "portionQuantity": "10",
+      "portionUnit": "unidades",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-mantequilla-mani",
+      "name": "Mantequilla de maní",
+      "category": "FAT",
+      "portionQuantity": "1/2",
+      "portionUnit": "cda",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-margarina-light-sin-trans",
+      "name": "Margarina Light sin trans",
+      "category": "FAT",
+      "portionQuantity": "1",
+      "portionUnit": "cda",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-margarina-sin-trans",
+      "name": "Margarina sin trans",
+      "category": "FAT",
+      "portionQuantity": "1",
+      "portionUnit": "cdta",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-mayonesa-vegana",
+      "name": "Mayonesa vegana",
+      "category": "FAT",
+      "portionQuantity": "1",
+      "portionUnit": "cdta",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-nueces-almendras-maranon",
+      "name": "Nueces, almendras, marañón",
+      "category": "FAT",
+      "portionQuantity": "6",
+      "portionUnit": "unidades",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-pecanas",
+      "name": "Pecanas",
+      "category": "FAT",
+      "portionQuantity": "4",
+      "portionUnit": "mitades",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-pistachos",
+      "name": "Pistachos",
+      "category": "FAT",
+      "portionQuantity": "16",
+      "portionUnit": "unidades",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-semillas-pinon-girasol-ajonjoli",
+      "name": "Semillas (piñón, girasol, ajonjolí)",
+      "category": "FAT",
+      "portionQuantity": "1",
+      "portionUnit": "cda",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-leche-almendra-avellana-maranon-coco",
+      "name": "Leche de almendra, avellana, marañón, coco (0g azúcar)",
+      "category": "FAT",
+      "portionQuantity": "1",
+      "portionUnit": "taza",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-cerveza-12oz",
+      "name": "Cerveza (12 oz)",
+      "category": "FAT",
+      "portionQuantity": "1",
+      "portionUnit": "unidad (2 harinas)",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-cerveza-light-12oz",
+      "name": "Cerveza Light (12 oz)",
+      "category": "FAT",
+      "portionQuantity": "1",
+      "portionUnit": "unidad (1 harina)",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-digestivos",
+      "name": "Digestivos (1.5 oz)",
+      "category": "FAT",
+      "portionQuantity": "1",
+      "portionUnit": "unidad (2 grasas o 1 harina)",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-ron-whisky-vodka",
+      "name": "Ron, whisky, vodka, guaro, ginebra (1.5 oz)",
+      "category": "FAT",
+      "portionQuantity": "1",
+      "portionUnit": "unidad (2 grasas o 1 harina)",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-vino",
+      "name": "Vino (5 oz)",
+      "category": "FAT",
+      "portionQuantity": "1",
+      "portionUnit": "copa (2 grasas o 1 harina)",
+      "caloriesPerPortion": 45
+    },
+    {
+      "id": "fat-champagne",
+      "name": "Champagne (5 oz)",
+      "category": "FAT",
+      "portionQuantity": "1",
+      "portionUnit": "copa (2 grasas o 1 harina)",
+      "caloriesPerPortion": 45
+    }
+  ]
+}

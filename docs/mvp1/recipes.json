@@ -1,0 +1,494 @@
+{
+  "version": "1.0.0",
+  "recipes": [
+    {
+      "id": "gallo-pinto",
+      "nameEs": "Gallo Pinto",
+      "nameEn": "Spotted Rooster Rice and Beans",
+      "isVegetarian": true,
+      "isVegetarianOptional": false,
+      "method": "Sauté onion, pepper and cilantro in oil. Add beans with a little broth and Salsa Lizano. Stir in day-old rice until evenly colored. Cook a few minutes.",
+      "slots": ["BREAKFAST", "LUNCH", "DINNER"],
+      "ingredients": [
+        { "foodItemId": "grain-arroz-blanco", "description": "Arroz cocido blanco", "quantity": "2/3", "unit": "taza" },
+        { "foodItemId": "protein-frijoles-lentejas-garbanzos", "description": "Frijoles negros cocidos con un poco de caldo", "quantity": "1/3-1/2", "unit": "taza" },
+        { "foodItemId": null, "description": "Cebolla blanca picada", "quantity": "2", "unit": "cdas" },
+        { "foodItemId": "vegetable-chile-dulce", "description": "Chile dulce rojo picado", "quantity": "2", "unit": "cdas" },
+        { "foodItemId": null, "description": "Cilantro/culantro picado", "quantity": "1", "unit": "cda" },
+        { "foodItemId": "fat-aceites", "description": "Aceite", "quantity": "1", "unit": "cdta" },
+        { "foodItemId": null, "description": "Salsa Lizano", "quantity": "1-2", "unit": "cdtas" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 2 },
+        { "category": "PROTEIN", "portionValue": 1 },
+        { "category": "VEGETABLE", "portionValue": 0.5 },
+        { "category": "FAT", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "gallo-pinto-huevo",
+      "nameEs": "Gallo Pinto con Huevo",
+      "nameEn": "Gallo Pinto with Egg",
+      "isVegetarian": true,
+      "isVegetarianOptional": false,
+      "method": "Prepare gallo pinto as standard recipe. Serve with an egg cooked to preference. Optional natilla and corn tortilla on the side.",
+      "slots": ["BREAKFAST", "DINNER"],
+      "ingredients": [
+        { "foodItemId": "grain-arroz-blanco", "description": "Arroz cocido (en gallo pinto)", "quantity": "2/3", "unit": "taza" },
+        { "foodItemId": "protein-frijoles-lentejas-garbanzos", "description": "Frijoles cocidos (en gallo pinto)", "quantity": "1/3-1/2", "unit": "taza" },
+        { "foodItemId": "protein-huevo-entero", "description": "Huevo", "quantity": "1", "unit": "unidad" },
+        { "foodItemId": "fat-aceites", "description": "Aceite para el huevo", "quantity": "1", "unit": "cdta" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 2 },
+        { "category": "PROTEIN", "portionValue": 2 },
+        { "category": "VEGETABLE", "portionValue": 0.5 },
+        { "category": "FAT", "portionValue": 1.5 }
+      ]
+    },
+    {
+      "id": "tortilla-queso-palmeada",
+      "nameEs": "Tortilla de Queso Palmeada",
+      "nameEn": "Hand-Pressed Corn and Cheese Tortilla",
+      "isVegetarian": true,
+      "isVegetarianOptional": false,
+      "method": "Mix masa, cheese, salt and warm milk into a soft dough. Form balls and pat flat between plastic/wax paper. Cook on a lightly greased pan ~4 min per side. Serve with natilla.",
+      "slots": ["BREAKFAST", "AFTERNOON_SNACK"],
+      "ingredients": [
+        { "foodItemId": "grain-harina-masa", "description": "Masa de maíz (Maseca)", "quantity": "1 1/2", "unit": "tazas" },
+        { "foodItemId": "protein-queso-turrialba-palmito", "description": "Queso rallado (mozzarella/turrialba)", "quantity": "3/4", "unit": "taza" },
+        { "foodItemId": "dairy-leche-vaca-descremada", "description": "Leche tibia para amasar", "quantity": "2", "unit": "cdas" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 1 },
+        { "category": "PROTEIN", "portionValue": 1 },
+        { "category": "FAT", "portionValue": 0.5 }
+      ]
+    },
+    {
+      "id": "avena-leche-fruta",
+      "nameEs": "Avena con Leche y Fruta",
+      "nameEn": "Oatmeal with Milk and Fruit",
+      "isVegetarian": true,
+      "isVegetarianOptional": false,
+      "method": "Simmer oats in milk with cinnamon ~10 min until creamy. Top with fruit.",
+      "slots": ["BREAKFAST", "AFTERNOON_SNACK"],
+      "ingredients": [
+        { "foodItemId": "grain-cereal-crudo", "description": "Avena en hojuelas", "quantity": "1/2", "unit": "taza" },
+        { "foodItemId": "dairy-leche-vaca-descremada", "description": "Leche", "quantity": "1", "unit": "taza" },
+        { "foodItemId": "fruit-banano", "description": "Banano o papaya en trozos", "quantity": "1/2", "unit": "unidad o 1/2 taza" },
+        { "foodItemId": null, "description": "Canela", "quantity": "1", "unit": "pizca" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 2 },
+        { "category": "DAIRY", "portionValue": 1 },
+        { "category": "FRUIT", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "frijoles-molidos-huevo",
+      "nameEs": "Frijoles Molidos con Huevo",
+      "nameEn": "Refried Beans with Egg",
+      "isVegetarian": true,
+      "isVegetarianOptional": false,
+      "method": "Sauté onion, garlic, sweet pepper in oil. Add blended beans and Salsa Lizano. Cook stirring until thick. Serve with egg and tortilla/bread.",
+      "slots": ["BREAKFAST", "MORNING_SNACK"],
+      "ingredients": [
+        { "foodItemId": "protein-frijoles-lentejas-garbanzos", "description": "Frijoles negros licuados", "quantity": "1/2", "unit": "taza" },
+        { "foodItemId": null, "description": "Cebolla y chile dulce picados", "quantity": "2", "unit": "cdas" },
+        { "foodItemId": "fat-aceites", "description": "Aceite", "quantity": "1", "unit": "cdta" },
+        { "foodItemId": "protein-huevo-entero", "description": "Huevo", "quantity": "1", "unit": "unidad" },
+        { "foodItemId": "grain-tortilla-maiz-delgada", "description": "Tortilla de maíz o pan", "quantity": "1", "unit": "unidad" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 2 },
+        { "category": "PROTEIN", "portionValue": 2 },
+        { "category": "FAT", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "chorreadas",
+      "nameEs": "Chorreadas",
+      "nameEn": "Fresh Corn Pancakes",
+      "isVegetarian": true,
+      "isVegetarianOptional": false,
+      "method": "Blend corn, egg, flour, milk and sugar/salt into a lumpy batter. Cook spoonfuls in buttered pan until golden both sides. Serve with natilla (savory) or honey (sweet).",
+      "slots": ["BREAKFAST", "AFTERNOON_SNACK"],
+      "ingredients": [
+        { "foodItemId": "grain-elote-maiz-dulce", "description": "Maíz fresco en granos", "quantity": "1", "unit": "taza" },
+        { "foodItemId": "protein-huevo-entero", "description": "Huevo", "quantity": "1", "unit": "unidad" },
+        { "foodItemId": null, "description": "Harina", "quantity": "2", "unit": "cdas" },
+        { "foodItemId": "fat-margarina-sin-trans", "description": "Mantequilla para cocinar", "quantity": "1", "unit": "cdta" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 2 },
+        { "category": "PROTEIN", "portionValue": 0.5 },
+        { "category": "FAT", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "casado-pollo",
+      "nameEs": "Casado con Pollo",
+      "nameEn": "Married Plate with Chicken",
+      "isVegetarian": false,
+      "isVegetarianOptional": false,
+      "method": "Plate cooked rice and beans together. Add grilled chicken, a vegetable picadillo, fried plantain and a fresh salad. Serve with Salsa Lizano.",
+      "slots": ["LUNCH", "DINNER"],
+      "ingredients": [
+        { "foodItemId": "grain-arroz-blanco", "description": "Arroz blanco", "quantity": "2/3", "unit": "taza" },
+        { "foodItemId": "protein-frijoles-lentejas-garbanzos", "description": "Frijoles negros", "quantity": "1/2", "unit": "taza" },
+        { "foodItemId": null, "description": "Pechuga de pollo a la plancha", "quantity": "3", "unit": "oz" },
+        { "foodItemId": "vegetable-chayote", "description": "Picadillo de chayote o vainica", "quantity": "1/2", "unit": "taza" },
+        { "foodItemId": "grain-camote-platano", "description": "Plátano maduro frito", "quantity": "2-3", "unit": "tajadas" },
+        { "foodItemId": "vegetable-repollo", "description": "Ensalada de repollo y tomate", "quantity": "1", "unit": "taza" },
+        { "foodItemId": "fat-aceites", "description": "Aceite", "quantity": "1-2", "unit": "cdtas" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 4 },
+        { "category": "PROTEIN", "portionValue": 4 },
+        { "category": "VEGETABLE", "portionValue": 1 },
+        { "category": "FAT", "portionValue": 2 }
+      ]
+    },
+    {
+      "id": "arroz-pollo",
+      "nameEs": "Arroz con Pollo",
+      "nameEn": "Costa Rican Chicken Rice",
+      "isVegetarian": false,
+      "isVegetarianOptional": false,
+      "method": "Poach and shred chicken. Sauté sofrito and vegetables in achiote oil. Toast rice, add broth and cook dry. Fold in chicken, corn and peas. Finish with cilantro and Salsa Lizano.",
+      "slots": ["LUNCH", "DINNER"],
+      "ingredients": [
+        { "foodItemId": "grain-arroz-blanco", "description": "Arroz", "quantity": "3/4", "unit": "taza" },
+        { "foodItemId": null, "description": "Pollo deshilachado", "quantity": "3", "unit": "oz" },
+        { "foodItemId": "vegetable-zanahoria", "description": "Zanahoria, chile dulce picados", "quantity": "1/2", "unit": "taza" },
+        { "foodItemId": null, "description": "Achiote", "quantity": "1", "unit": "cdta" },
+        { "foodItemId": "fat-aceites", "description": "Aceite", "quantity": "1", "unit": "cdta" },
+        { "foodItemId": null, "description": "Salsa Lizano", "quantity": "2", "unit": "cdtas" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 2 },
+        { "category": "PROTEIN", "portionValue": 3 },
+        { "category": "VEGETABLE", "portionValue": 1 },
+        { "category": "FAT", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "olla-carne",
+      "nameEs": "Olla de Carne",
+      "nameEn": "Beef and Root Vegetable Stew",
+      "isVegetarian": false,
+      "isVegetarianOptional": false,
+      "method": "Simmer beef with aromatics 2-3 hr until tender. Add hard roots first, softer vegetables later. Serve broth, meat and vegetables with white rice.",
+      "slots": ["LUNCH", "DINNER"],
+      "ingredients": [
+        { "foodItemId": null, "description": "Carne de res (posta/pecho)", "quantity": "3", "unit": "oz" },
+        { "foodItemId": "grain-yuca", "description": "Yuca", "quantity": "1/3", "unit": "taza" },
+        { "foodItemId": "grain-papa-cascara", "description": "Papa", "quantity": "1/2", "unit": "unidad" },
+        { "foodItemId": "vegetable-chayote", "description": "Chayote", "quantity": "1/2", "unit": "taza" },
+        { "foodItemId": "vegetable-zanahoria", "description": "Zanahoria", "quantity": "1/2", "unit": "taza" },
+        { "foodItemId": "grain-camote-platano", "description": "Plátano", "quantity": "1/3", "unit": "taza" },
+        { "foodItemId": "grain-arroz-blanco", "description": "Arroz blanco para acompañar", "quantity": "1/2", "unit": "taza" }
+      ],
+      "composition": [
+        { "category": "PROTEIN", "portionValue": 3 },
+        { "category": "GRAIN", "portionValue": 3.5 },
+        { "category": "VEGETABLE", "portionValue": 1.5 }
+      ]
+    },
+    {
+      "id": "arroz-atun",
+      "nameEs": "Arroz con Atún",
+      "nameEn": "Tuna Rice",
+      "isVegetarian": false,
+      "isVegetarianOptional": false,
+      "method": "Heat achiote oil, sauté sofrito until soft. Add shredded tuna, carrot and peas. Fold in cooked rice. Season and serve, optionally with plantain.",
+      "slots": ["LUNCH", "DINNER"],
+      "ingredients": [
+        { "foodItemId": "grain-arroz-blanco", "description": "Arroz cocido", "quantity": "2", "unit": "tazas (compartido)" },
+        { "foodItemId": null, "description": "Atún en lata", "quantity": "1", "unit": "lata (~3oz drenado)" },
+        { "foodItemId": "vegetable-zanahoria", "description": "Zanahoria y arvejas", "quantity": "1/2", "unit": "taza" },
+        { "foodItemId": "fat-aceites", "description": "Aceite con achiote", "quantity": "1", "unit": "cdta" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 2 },
+        { "category": "PROTEIN", "portionValue": 2.5 },
+        { "category": "VEGETABLE", "portionValue": 1 },
+        { "category": "FAT", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "picadillo-chayote",
+      "nameEs": "Picadillo de Chayote con Arroz y Tortilla",
+      "nameEn": "Chayote Hash with Rice and Tortilla",
+      "isVegetarian": true,
+      "isVegetarianOptional": true,
+      "method": "Boil and dice chayote. Sauté sofrito (and ground beef if using) in achiote oil. Add chayote and corn, cook covered until tender. Finish with cilantro. Serve with rice and tortilla.",
+      "slots": ["LUNCH", "DINNER", "AFTERNOON_SNACK"],
+      "ingredients": [
+        { "foodItemId": "vegetable-chayote", "description": "Chayote cocido en cubos", "quantity": "1", "unit": "taza" },
+        { "foodItemId": null, "description": "Carne molida (opcional)", "quantity": "1/4", "unit": "taza" },
+        { "foodItemId": "grain-arroz-blanco", "description": "Arroz", "quantity": "2/3", "unit": "taza" },
+        { "foodItemId": "grain-tortilla-maiz-delgada", "description": "Tortilla", "quantity": "1", "unit": "unidad" },
+        { "foodItemId": "fat-aceites", "description": "Aceite", "quantity": "1", "unit": "cdta" }
+      ],
+      "composition": [
+        { "category": "VEGETABLE", "portionValue": 1.5 },
+        { "category": "PROTEIN", "portionValue": 1 },
+        { "category": "GRAIN", "portionValue": 3 },
+        { "category": "FAT", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "pescado-plancha-vegetales",
+      "nameEs": "Pescado a la Plancha con Vegetales",
+      "nameEn": "Grilled Fish with Vegetables",
+      "isVegetarian": false,
+      "isVegetarianOptional": false,
+      "method": "Pat fish dry, season with garlic, lemon, salt. Sear 3-4 min per side on a hot, lightly oiled pan. Serve with vegetables and rice.",
+      "slots": ["LUNCH", "DINNER"],
+      "ingredients": [
+        { "foodItemId": null, "description": "Filete de pescado blanco (tilapia/corvina)", "quantity": "4", "unit": "oz" },
+        { "foodItemId": "grain-arroz-blanco", "description": "Arroz cocido", "quantity": "1/3-2/3", "unit": "taza" },
+        { "foodItemId": "vegetable-chayote", "description": "Vegetales salteados/al vapor", "quantity": "1-1.5", "unit": "taza" },
+        { "foodItemId": "fat-aceites", "description": "Aceite de oliva", "quantity": "1", "unit": "cdta" }
+      ],
+      "composition": [
+        { "category": "PROTEIN", "portionValue": 4 },
+        { "category": "VEGETABLE", "portionValue": 2 },
+        { "category": "GRAIN", "portionValue": 1.5 },
+        { "category": "FAT", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "batido-frutas-leche",
+      "nameEs": "Batido de Frutas con Leche",
+      "nameEn": "Fruit Milkshake",
+      "isVegetarian": true,
+      "isVegetarianOptional": false,
+      "method": "Blend fruit, milk/yogurt and ice until smooth.",
+      "slots": ["MORNING_SNACK", "AFTERNOON_SNACK", "BREAKFAST"],
+      "ingredients": [
+        { "foodItemId": "fruit-banano", "description": "Fruta (banano, papaya, fresa, mango)", "quantity": "1", "unit": "taza" },
+        { "foodItemId": "dairy-leche-vaca-descremada", "description": "Leche o yogurt", "quantity": "1", "unit": "taza" }
+      ],
+      "composition": [
+        { "category": "FRUIT", "portionValue": 1 },
+        { "category": "DAIRY", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "fruta-picada",
+      "nameEs": "Fruta Picada",
+      "nameEn": "Chopped Fresh Fruit Cup",
+      "isVegetarian": true,
+      "isVegetarianOptional": false,
+      "method": "Chop fruit, dress with lime. Serve cold.",
+      "slots": ["MORNING_SNACK", "AFTERNOON_SNACK", "BREAKFAST"],
+      "ingredients": [
+        { "foodItemId": "fruit-papaya", "description": "Papaya, piña, sandía o mango picados", "quantity": "1", "unit": "taza" },
+        { "foodItemId": null, "description": "Limón", "quantity": "1", "unit": "cdta jugo" }
+      ],
+      "composition": [
+        { "category": "FRUIT", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "gallito-frijoles-molidos",
+      "nameEs": "Gallito de Frijoles Molidos",
+      "nameEn": "Bean and Cheese Tortilla Taco",
+      "isVegetarian": true,
+      "isVegetarianOptional": false,
+      "method": "Spread warm blended beans on a fresh tortilla, top with cheese, fold and eat.",
+      "slots": ["MORNING_SNACK", "AFTERNOON_SNACK"],
+      "ingredients": [
+        { "foodItemId": "grain-tortilla-maiz-delgada", "description": "Tortilla de maíz", "quantity": "1", "unit": "unidad" },
+        { "foodItemId": "protein-frijoles-lentejas-garbanzos", "description": "Frijoles molidos", "quantity": "1/4", "unit": "taza" },
+        { "foodItemId": "protein-queso-blanco-rallado", "description": "Queso rallado", "quantity": "1", "unit": "cda" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 1 },
+        { "category": "PROTEIN", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "chorreada-natilla",
+      "nameEs": "Chorreada con Natilla",
+      "nameEn": "Corn Pancake with Sour Cream",
+      "isVegetarian": true,
+      "isVegetarianOptional": false,
+      "method": "Cook chorreadas. Top with salted natilla. Serve with coffee.",
+      "slots": ["MORNING_SNACK", "AFTERNOON_SNACK"],
+      "ingredients": [
+        { "foodItemId": "grain-elote-maiz-dulce", "description": "Chorreada (ver receta base)", "quantity": "1-2", "unit": "unidades" },
+        { "foodItemId": "dairy-leche-vaca-descremada", "description": "Natilla", "quantity": "2", "unit": "cdas" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 2 },
+        { "category": "PROTEIN", "portionValue": 0.5 },
+        { "category": "FAT", "portionValue": 1 },
+        { "category": "DAIRY", "portionValue": 0.5 }
+      ]
+    },
+    {
+      "id": "tortilla-queso-cafe",
+      "nameEs": "Tortilla con Queso y Café",
+      "nameEn": "Cheese Tortilla with Coffee",
+      "isVegetarian": true,
+      "isVegetarianOptional": false,
+      "method": "Reheat or freshly pat a cheese tortilla. Serve with coffee.",
+      "slots": ["MORNING_SNACK", "AFTERNOON_SNACK", "BREAKFAST"],
+      "ingredients": [
+        { "foodItemId": "grain-harina-masa", "description": "Tortilla de queso (ver receta base)", "quantity": "1", "unit": "unidad" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 1 },
+        { "category": "PROTEIN", "portionValue": 1 },
+        { "category": "FAT", "portionValue": 0.5 }
+      ]
+    },
+    {
+      "id": "pan-frijoles",
+      "nameEs": "Pan con Frijoles",
+      "nameEn": "Bread with Refried Beans",
+      "isVegetarian": true,
+      "isVegetarianOptional": false,
+      "method": "Spread warm beans on bread. Add cheese or natilla if desired.",
+      "slots": ["MORNING_SNACK", "AFTERNOON_SNACK"],
+      "ingredients": [
+        { "foodItemId": "grain-cuadrado-integral", "description": "Pan", "quantity": "1", "unit": "tajada" },
+        { "foodItemId": "protein-frijoles-lentejas-garbanzos", "description": "Frijoles molidos", "quantity": "1/4", "unit": "taza" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 1 },
+        { "category": "PROTEIN", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "sopa-negra-huevo",
+      "nameEs": "Sopa Negra con Huevo",
+      "nameEn": "Black Bean Soup with Egg",
+      "isVegetarian": true,
+      "isVegetarianOptional": false,
+      "method": "Sauté sofrito. Add beans and broth, simmer ~20 min. Add Salsa Lizano. Serve over sliced hard-boiled egg with rice and cilantro.",
+      "slots": ["DINNER", "LUNCH"],
+      "ingredients": [
+        { "foodItemId": "protein-frijoles-lentejas-garbanzos", "description": "Frijoles negros con caldo", "quantity": "3/4-1", "unit": "taza" },
+        { "foodItemId": "protein-huevo-entero", "description": "Huevo duro", "quantity": "1-2", "unit": "unidades" },
+        { "foodItemId": "grain-arroz-blanco", "description": "Arroz para acompañar", "quantity": "1/2", "unit": "taza" },
+        { "foodItemId": "fat-aceites", "description": "Aceite", "quantity": "1", "unit": "cdta" }
+      ],
+      "composition": [
+        { "category": "PROTEIN", "portionValue": 3 },
+        { "category": "GRAIN", "portionValue": 2 },
+        { "category": "VEGETABLE", "portionValue": 0.5 },
+        { "category": "FAT", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "ceviche-pescado",
+      "nameEs": "Ceviche de Pescado",
+      "nameEn": "Citrus-Cured Fish",
+      "isVegetarian": false,
+      "isVegetarianOptional": false,
+      "method": "Cover diced fish with strained lime juice. Refrigerate 1-2 hr until opaque. Mix with finely chopped onion, pepper, celery and cilantro. Serve cold with crackers or patacones.",
+      "slots": ["DINNER", "LUNCH"],
+      "ingredients": [
+        { "foodItemId": null, "description": "Pescado blanco fresco en cubos (corvina/tilapia)", "quantity": "4", "unit": "oz" },
+        { "foodItemId": null, "description": "Jugo de limón", "quantity": "1/2-3/4", "unit": "taza" },
+        { "foodItemId": "vegetable-cebolla", "description": "Cebolla, chile dulce, apio picados", "quantity": "1/2", "unit": "taza" }
+      ],
+      "composition": [
+        { "category": "PROTEIN", "portionValue": 3.5 },
+        { "category": "VEGETABLE", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "picadillo-papa-zanahoria-vainica",
+      "nameEs": "Picadillo de Papa, Zanahoria y Vainica con Arroz",
+      "nameEn": "Potato, Carrot and Green Bean Hash with Rice",
+      "isVegetarian": true,
+      "isVegetarianOptional": true,
+      "method": "Sauté sofrito (and beef if using). Add diced vegetables and a little broth. Cook covered until tender. Finish with cilantro. Serve with rice/tortilla. Boil green beans at full heat 10+ min to neutralize lectins.",
+      "slots": ["DINNER", "LUNCH"],
+      "ingredients": [
+        { "foodItemId": "grain-papa-cascara", "description": "Papa en cubos", "quantity": "1/2", "unit": "taza" },
+        { "foodItemId": "vegetable-zanahoria", "description": "Zanahoria en cubos", "quantity": "1/2", "unit": "taza" },
+        { "foodItemId": "vegetable-vainicas", "description": "Vainicas picadas", "quantity": "1/2", "unit": "taza" },
+        { "foodItemId": null, "description": "Carne molida (opcional)", "quantity": "1/4", "unit": "taza" },
+        { "foodItemId": "grain-arroz-blanco", "description": "Arroz", "quantity": "2/3", "unit": "taza" },
+        { "foodItemId": "fat-aceites", "description": "Aceite", "quantity": "1", "unit": "cdta" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 3 },
+        { "category": "VEGETABLE", "portionValue": 1 },
+        { "category": "PROTEIN", "portionValue": 1 },
+        { "category": "FAT", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "chayotes-rellenos-pollo",
+      "nameEs": "Chayotes Rellenos con Pollo",
+      "nameEn": "Chicken-Stuffed Chayote",
+      "isVegetarian": false,
+      "isVegetarianOptional": false,
+      "method": "Boil chayotes until tender-firm. Halve and hollow. Sauté sofrito with chicken, cilantro and cream. Stuff chayotes, top with cheese and bake until golden.",
+      "slots": ["DINNER", "LUNCH"],
+      "ingredients": [
+        { "foodItemId": "vegetable-chayote", "description": "Chayote (2 mitades)", "quantity": "1", "unit": "unidad" },
+        { "foodItemId": null, "description": "Pollo deshilachado", "quantity": "3", "unit": "oz" },
+        { "foodItemId": "dairy-leche-vaca-descremada", "description": "Crema", "quantity": "2", "unit": "cdas" },
+        { "foodItemId": "protein-queso-turrialba-palmito", "description": "Queso para gratinar", "quantity": "1", "unit": "cda" }
+      ],
+      "composition": [
+        { "category": "VEGETABLE", "portionValue": 1.5 },
+        { "category": "PROTEIN", "portionValue": 3 },
+        { "category": "DAIRY", "portionValue": 0.5 },
+        { "category": "FAT", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "arroz-vegetales",
+      "nameEs": "Arroz con Vegetales",
+      "nameEn": "Vegetable Rice",
+      "isVegetarian": true,
+      "isVegetarianOptional": false,
+      "method": "Sauté sofrito and vegetables in oil. Toast rice. Add broth and cook dry. Finish with cilantro.",
+      "slots": ["DINNER", "LUNCH"],
+      "ingredients": [
+        { "foodItemId": "grain-arroz-blanco", "description": "Arroz", "quantity": "3/4", "unit": "taza" },
+        { "foodItemId": "vegetable-zanahoria", "description": "Zanahoria, vainica, maíz, arvejas, chile", "quantity": "1", "unit": "taza" },
+        { "foodItemId": "fat-aceites", "description": "Aceite", "quantity": "1", "unit": "cdta" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 2 },
+        { "category": "VEGETABLE", "portionValue": 1.5 },
+        { "category": "FAT", "portionValue": 1 }
+      ]
+    },
+    {
+      "id": "casado-liviano-vegetariano",
+      "nameEs": "Casado Liviano Vegetariano",
+      "nameEn": "Light Vegetarian Married Plate",
+      "isVegetarian": true,
+      "isVegetarianOptional": false,
+      "method": "Plate rice and beans. Add egg or cheese as protein, a vegetable picadillo, salad and plantain.",
+      "slots": ["DINNER", "LUNCH"],
+      "ingredients": [
+        { "foodItemId": "grain-arroz-blanco", "description": "Arroz", "quantity": "1/2", "unit": "taza" },
+        { "foodItemId": "protein-frijoles-lentejas-garbanzos", "description": "Frijoles", "quantity": "1/2", "unit": "taza" },
+        { "foodItemId": "protein-huevo-entero", "description": "Huevo o queso", "quantity": "1", "unit": "unidad o 2oz" },
+        { "foodItemId": "vegetable-chayote", "description": "Picadillo de vegetales", "quantity": "1/2", "unit": "taza" },
+        { "foodItemId": "vegetable-lechuga", "description": "Ensalada verde", "quantity": "1", "unit": "taza" },
+        { "foodItemId": "grain-camote-platano", "description": "Plátano", "quantity": "1-2", "unit": "tajadas" },
+        { "foodItemId": "fat-aceites", "description": "Aceite", "quantity": "1", "unit": "cdta" }
+      ],
+      "composition": [
+        { "category": "GRAIN", "portionValue": 2.5 },
+        { "category": "PROTEIN", "portionValue": 2 },
+        { "category": "VEGETABLE", "portionValue": 1 },
+        { "category": "FAT", "portionValue": 1 }
+      ]
+    }
+  ]
+}
