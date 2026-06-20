@@ -12,12 +12,15 @@ Current phase: MVP1 design complete, pre-code.
 
 ## Tech Stack
 
-| Layer    | Technology                              |
-|----------|-----------------------------------------|
-| Runtime  | React Native + Expo (managed workflow)  |
-| Database | expo-sqlite (SQLite, local-only)        |
-| Platform | iOS + Android                           |
-| Language | TypeScript                              |
+| Layer       | Technology                              |
+|-------------|-----------------------------------------|
+| Runtime     | React Native + Expo (managed workflow)  |
+| Routing     | expo-router ~4.x (file-based)           |
+| Database    | expo-sqlite ~15.x (SQLite, local-only)  |
+| State       | Zustand ^5.x                            |
+| Bottom sheet| @gorhom/bottom-sheet ^5.x (US-06 swap) |
+| Platform    | iOS + Android                           |
+| Language    | TypeScript ^5.x                         |
 
 > Note: the repo's `.gitignore` is Xcode-origin from the initial template and will be replaced once the Expo scaffold is initialized.
 
@@ -31,12 +34,39 @@ docs/mvp1/
   domain-model.md      Entity definitions, relationships, and domain rules
   data-schema.md       SQLite DDL, key query patterns, migration notes
   screen-flow.md       Navigation structure, screen inventory, UX constraints
+  project-structure.md Directory layout, layer responsibilities, boot sequence
   food-items.json      Seed data — ~130 exchange-list food items (Spanish names)
   recipes.json         Seed data — 24 Costa Rican recipes with ingredients + composition
   seed-data-format.md  Import format spec, field rules, idempotency strategy
 CLAUDE.md              This file
 README.md              Project stub
 ```
+
+**Target source structure** (once Expo scaffold is added):
+
+```
+app/                          # Expo Router screens
+  (tabs)/index.tsx            # Today's Plan
+  (tabs)/recipes.tsx          # Recipe Catalog
+  (tabs)/foods.tsx            # Food Database
+  (tabs)/settings.tsx         # Portion Targets
+  recipe/[id].tsx             # Recipe Detail
+  food/[id].tsx               # Food Item Detail
+  onboarding/                 # welcome → portions → confirm
+src/
+  domain/entities/            # Pure TS — FoodCategory, MealSlot, Recipe, etc.
+  domain/rules/               # calculateDailyCalories, deriveRecipeComposition
+  data/db/                    # schema.sql, client.ts, migrate.ts
+  data/seed/                  # food-items.json + recipes.json (moved from docs/)
+  data/repositories/          # foodItem, portionTarget, recipe, dailyPlan
+  store/                      # Zustand: usePortionTargetStore, useDailyPlanStore
+  components/                 # MealSlotCard, RecipeCard, SwapBottomSheet, etc.
+  hooks/                      # useTodaysPlan, useRecipesBySlot, useFoodSubstitutes
+```
+
+**Layer rule**: `domain/` never imports from `data/`, `store/`, or `app/`. Business rules stay testable in isolation.
+
+Full layout and traceability table: `docs/mvp1/project-structure.md`
 
 ---
 
@@ -83,11 +113,18 @@ These are the decisions most likely to be implemented incorrectly:
 ## Data Layer
 
 - **Database**: expo-sqlite, single SQLite file opened at app start.
-- **Schema**: defined in `docs/mvp1/data-schema.md` — run as a single `schema.sql` on first launch.
-- **Seed import**: two JSON files loaded immediately after schema creation — see `docs/mvp1/seed-data-format.md` for the import sequence and idempotency rules.
-- **No ORM in MVP1.** Use raw expo-sqlite (`execAsync` / `getFirstAsync` / `getAllAsync`).
-- All database access should live in a `db/` module (path TBD when Expo scaffold is added).
-- `food-items.json` and `recipes.json` in `docs/mvp1/` are design artifacts; they will move to `db/seeds/` when the Expo project is initialized.
+- **Schema**: defined in `docs/mvp1/data-schema.md` — run as a single `schema.sql` on first launch via `src/data/db/migrate.ts`.
+- **Seed import**: `food-items.json` + `recipes.json` loaded immediately after schema creation — see `docs/mvp1/seed-data-format.md` for the import sequence and idempotency rules.
+- **No ORM in MVP1.** Use raw expo-sqlite (`execAsync` / `getFirstAsync` / `getAllAsync`). All DB access lives in `src/data/repositories/`.
+- `food-items.json` and `recipes.json` in `docs/mvp1/` are design artifacts; they will move to `src/data/seed/` when the Expo scaffold is initialized.
+
+**First-launch boot sequence** (implemented in `app/_layout.tsx`):
+```
+→ Has schema been run?  NO  → run schema.sql + import seed → /onboarding/welcome
+                        YES → Does portion_target have rows?
+                                NO  → /onboarding/welcome
+                                YES → /(tabs) Today's Plan
+```
 
 ---
 
