@@ -14,6 +14,58 @@ React Native · Expo · TypeScript · expo-sqlite · Zustand · iOS + Android
 
 ---
 
+## Getting Started
+
+You can work on the app either in a ready-made **GitHub Codespace** (zero local
+setup) or **locally** on your own machine. Both paths use the same commands once
+dependencies are installed.
+
+### Option A — GitHub Codespaces (recommended)
+
+The repo ships a security-hardened dev container (Node 20, all tooling
+pre-configured). See [`.devcontainer/README.md`](.devcontainer/README.md) for details.
+
+1. On GitHub, click **`Code` ▸ `Codespaces` ▸ `Create codespace on this branch`**.
+2. Wait for the first build to finish — it runs `npm install` automatically.
+3. Run the tests in the integrated terminal:
+   ```bash
+   npm test
+   ```
+
+> If you ever need to reinstall manually inside the codespace, just run `npm install`.
+
+### Option B — Local machine
+
+**Prerequisites:** [Node.js 20 LTS](https://nodejs.org/) and npm.
+
+```bash
+# 1. Clone and enter the repo
+git clone https://github.com/waltervillalobos/nutritional-app.git
+cd nutritional-app
+
+# 2. Install dependencies
+npm install
+
+# 3. Run the unit tests
+npm test
+```
+
+### Available commands
+
+| Command | What it does |
+|---|---|
+| `npm install` | Install all dependencies |
+| `npm test` | Run the unit tests (jest-expo) |
+| `npm run test:watch` | Run tests in watch mode |
+| `npm run typecheck` | Type-check the project (`tsc --noEmit`) |
+| `npm run web` | Start the Expo web preview (port **8081**) |
+| `npm run tunnel` | Start Expo with a tunnel — scan the QR code with **Expo Go** on a device |
+
+> **Note:** Standard Codespaces cannot run Android/iOS emulators (no nested
+> virtualization). Use `npm run web` or `npm run tunnel` + Expo Go to preview the app.
+
+---
+
 ## MVP1 Documents
 
 | Document | Description |
