@@ -7,7 +7,7 @@ toolchain defined in `docs/mvp1/project-structure.md`.
 ## What you get
 
 - **Node 20 LTS** on the official Microsoft `typescript-node` image (required by
-  Expo SDK 52), running as the **non-root `vscode` user**.
+  Expo SDK 52), running as the image's built-in **non-root `node` user**.
 - All project dependencies installed automatically (`npm install` on create).
 - VS Code extensions: Expo Tools, ESLint, Prettier, Jest.
 
