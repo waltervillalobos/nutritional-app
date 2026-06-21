@@ -1,0 +1,48 @@
+{
+  // Secure GitHub Codespaces / Dev Container for the Nutrition App.
+  // Official Microsoft image, pinned to Node 20 LTS (required by Expo SDK 52),
+  // runs as the non-root "vscode" user. Keep the feature surface minimal.
+  "name": "nutrition-app",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm",
+
+  // Minimal features only — github-cli for repo workflows. No Docker-in-Docker
+  // or other privileged daemons, to keep the attack surface small.
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+
+  // Install JS dependencies after the container is created (unprivileged).
+  "postCreateCommand": "npm install",
+
+  // Metro / Expo web dev server. Not made public — forwarded privately to the user.
+  "forwardPorts": [8081, 19006],
+  "portsAttributes": {
+    "8081": { "label": "Metro / Expo Web", "onAutoForward": "notify" },
+    "19006": { "label": "Expo Web (fallback)", "onAutoForward": "silent" }
+  },
+
+  "containerEnv": {
+    // Reduce outbound telemetry from the Expo CLI.
+    "EXPO_NO_TELEMETRY": "1",
+    "EXPO_USE_DEV_SERVER": "true"
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "expo.vscode-expo-tools",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "orta.vscode-jest"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    }
+  },
+
+  // Explicit non-root user. Never commit tokens — provide EXPO_TOKEN and any
+  // other secrets via GitHub Codespaces encrypted secrets, not this file.
+  "remoteUser": "vscode"
+}

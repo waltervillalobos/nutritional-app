@@ -1,0 +1,20 @@
+version: 2
+updates:
+  # Keep npm dependencies patched for supply-chain security.
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      expo:
+        patterns:
+          - "expo"
+          - "expo-*"
+          - "@expo/*"
+
+  # Keep the devcontainer base image and features patched.
+  - package-ecosystem: "devcontainers"
+    directory: "/"
+    schedule:
+      interval: "weekly"
