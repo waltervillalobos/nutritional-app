@@ -1,7 +1,7 @@
 {
   // Secure GitHub Codespaces / Dev Container for the Nutrition App.
-  // Official Microsoft image, pinned to Node 20 LTS (required by Expo SDK 52),
-  // runs as the non-root "vscode" user. Keep the feature surface minimal.
+  // Official Microsoft image, pinned to Node 20 LTS (required by Expo SDK 56),
+  // runs as the image's built-in non-root "node" user. Keep the feature surface minimal.
   "name": "nutrition-app",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm",
 
@@ -42,7 +42,9 @@
     }
   },
 
-  // Explicit non-root user. Never commit tokens — provide EXPO_TOKEN and any
-  // other secrets via GitHub Codespaces encrypted secrets, not this file.
-  "remoteUser": "vscode"
+  // Explicit non-root user. This image's built-in non-root user is "node"
+  // (not "vscode", which only exists on the base/Ubuntu images). Never commit
+  // tokens — provide EXPO_TOKEN and any other secrets via GitHub Codespaces
+  // encrypted secrets, not this file.
+  "remoteUser": "node"
 }
