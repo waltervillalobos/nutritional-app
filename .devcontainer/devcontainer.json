@@ -1,6 +1,6 @@
 {
   // Secure GitHub Codespaces / Dev Container for the Nutrition App.
-  // Official Microsoft image, pinned to Node 20 LTS (required by Expo SDK 52),
+  // Official Microsoft image, pinned to Node 20 LTS (required by Expo SDK 56),
   // runs as the image's built-in non-root "node" user. Keep the feature surface minimal.
   "name": "nutrition-app",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm",
