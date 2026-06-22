@@ -38,6 +38,12 @@ pre-configured). See [`.devcontainer/README.md`](.devcontainer/README.md) for de
 
 **Prerequisites:** [Node.js 20 LTS](https://nodejs.org/) and npm.
 
+> **iOS simulator (macOS only):** Before running `npx expo start`, you must accept the Xcode license once:
+> ```bash
+> sudo xcodebuild -license
+> ```
+> Scroll to the end of the license and type `agree`. This is only required the first time.
+
 ```bash
 # 1. Clone and enter the repo
 git clone https://github.com/waltervillalobos/nutritional-app.git

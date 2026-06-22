@@ -14,13 +14,13 @@ Current phase: MVP1 design complete, pre-code.
 
 | Layer       | Technology                              |
 |-------------|-----------------------------------------|
-| Runtime     | React Native 0.85.x + Expo 56.x (managed workflow) |
-| Routing     | expo-router ~56.x (file-based)          |
-| Database    | expo-sqlite ~56.x (SQLite, local-only)  |
+| Runtime     | React Native 0.81.x + Expo 54.x (managed workflow) |
+| Routing     | expo-router ~6.x (file-based)           |
+| Database    | expo-sqlite ~16.x (SQLite, local-only)  |
 | State       | Zustand ^5.x                            |
 | Bottom sheet| @gorhom/bottom-sheet ^5.x (US-06 swap) |
 | Platform    | iOS + Android                           |
-| Language    | TypeScript ^6.x                         |
+| Language    | TypeScript ~5.9.x                       |
 
 > Note: the repo's `.gitignore` is Xcode-origin from the initial template and will be replaced once the Expo scaffold is initialized.
 
