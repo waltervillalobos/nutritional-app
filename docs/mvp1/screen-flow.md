@@ -2,32 +2,32 @@
 
 > Navigation: bottom tab bar (4 tabs) · Swap interaction: bottom sheet · Derived from User Stories + Domain Model
 
------
+---
 
 ## 1. Navigation Structure
 
 **Bottom Tab Bar (persistent, 4 tabs):**
 
-|Tab     |Icon (suggested)|Root screen    |
-|--------|----------------|---------------|
-|Today   |calendar/home   |Today's Plan   |
-|Recipes |book            |Recipe Catalog |
-|Foods   |list            |Food Database  |
-|Settings|gear            |Portion Targets|
+| Tab      | Icon (suggested) | Root screen     |
+| -------- | ---------------- | --------------- |
+| Today    | calendar/home    | Today's Plan    |
+| Recipes  | book             | Recipe Catalog  |
+| Foods    | list             | Food Database   |
+| Settings | gear             | Portion Targets |
 
 **Top bar per screen:**
 
-|Screen          |Top bar content                                  |
-|----------------|-------------------------------------------------|
-|Today's Plan    |App name (left) · Today's date (right) · no back |
-|Recipe Catalog  |"Recipes" title · filter icon (vegetarian toggle)|
-|Recipe Detail   |back arrow · recipe name                         |
-|Food Database   |"Food Database" title · search icon              |
-|Food Item Detail|back arrow · food item name                      |
-|Settings        |"Settings" title · no back (tab root)            |
-|Onboarding      |no back · step indicator · no skip               |
+| Screen           | Top bar content                                   |
+| ---------------- | ------------------------------------------------- |
+| Today's Plan     | App name (left) · Today's date (right) · no back  |
+| Recipe Catalog   | "Recipes" title · filter icon (vegetarian toggle) |
+| Recipe Detail    | back arrow · recipe name                          |
+| Food Database    | "Food Database" title · search icon               |
+| Food Item Detail | back arrow · food item name                       |
+| Settings         | "Settings" title · no back (tab root)             |
+| Onboarding       | no back · step indicator · no skip                |
 
------
+---
 
 ## 2. Full Screen Flow
 
@@ -92,7 +92,7 @@ flowchart TD
     style OB3 fill:#f0f0f0,stroke:#888
 ```
 
------
+---
 
 ## 3. Key Screen Details
 
@@ -147,24 +147,24 @@ flowchart TD
 - **Step 3**: confirmation showing derived calories, single "Get Started" action → Today's Plan
 - **No skip option** — confirmed in prior decision
 
------
+---
 
 ## 4. UX Constraints Validated Against User Stories
 
-|Constraint                                 |Source|Validated by flow                    |
-|-------------------------------------------|------|-------------------------------------|
-|Max 3 taps to swap a recipe                |US-06 |2 taps (Swap → Select)               |
-|Max 2 taps from daily plan to recipe detail|US-09 |1 tap (card → detail)                |
-|Onboarding under 2 minutes                 |US-14 |3 short steps, numeric entry only    |
-|Food search results <1 second              |US-12 |Local SQLite, indexed — no network   |
-|All 5 meal slots visible on one screen     |US-04 |Single scrollable list, no pagination|
+| Constraint                                  | Source | Validated by flow                     |
+| ------------------------------------------- | ------ | ------------------------------------- |
+| Max 3 taps to swap a recipe                 | US-06  | 2 taps (Swap → Select)                |
+| Max 2 taps from daily plan to recipe detail | US-09  | 1 tap (card → detail)                 |
+| Onboarding under 2 minutes                  | US-14  | 3 short steps, numeric entry only     |
+| Food search results <1 second               | US-12  | Local SQLite, indexed — no network    |
+| All 5 meal slots visible on one screen      | US-04  | Single scrollable list, no pagination |
 
------
+---
 
 ## 5. Open Items for Development Phase
 
-|Item                                                    |Note                                                                                    |
-|--------------------------------------------------------|----------------------------------------------------------------------------------------|
-|Recipe card visual design (image vs. text-only)         |No recipe images sourced yet — text-only for MVP1, image field reserved in future schema|
-|Empty-state copy (no recipe for slot, no search results)|Needs final copywriting pass before dev                                                 |
-|Settings save UX (toast vs. inline confirmation)        |Defer to frontend-design phase                                                          |
+| Item                                                     | Note                                                                                     |
+| -------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Recipe card visual design (image vs. text-only)          | No recipe images sourced yet — text-only for MVP1, image field reserved in future schema |
+| Empty-state copy (no recipe for slot, no search results) | Needs final copywriting pass before dev                                                  |
+| Settings save UX (toast vs. inline confirmation)         | Defer to frontend-design phase                                                           |

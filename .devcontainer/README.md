@@ -13,8 +13,8 @@ toolchain defined in `docs/mvp1/project-structure.md`.
 
 ## Open it
 
-- **Codespaces:** GitHub → `Code` ▸ `Codespaces` ▸ *Create codespace on this branch*.
-- **Locally:** VS Code + Dev Containers extension ▸ *Reopen in Container*.
+- **Codespaces:** GitHub → `Code` ▸ `Codespaces` ▸ _Create codespace on this branch_.
+- **Locally:** VS Code + Dev Containers extension ▸ _Reopen in Container_.
 
 The first build runs `npm install` automatically. Wait for it to finish before
 running the commands below.
