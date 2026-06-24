@@ -2,7 +2,7 @@
 
 > Derived from: Domain Model (mvp1-domain-model.md) · Target: expo-sqlite · Local-only, offline-first
 
------
+---
 
 ## 1. Design Principles
 
@@ -12,7 +12,7 @@
 - **Enums as TEXT + CHECK constraints** — SQLite has no native enum type; `CHECK` enforces valid values at the DB layer.
 - **IDs**: TEXT (UUID) for seed-data portability across app versions; avoids collision risk when seed data is re-imported on updates.
 
------
+---
 
 ## 2. Schema DDL
 
@@ -148,7 +148,7 @@ CREATE TABLE daily_plan (
 CREATE INDEX idx_daily_plan_date ON daily_plan(plan_date);
 ```
 
------
+---
 
 ## 3. Schema Diagram
 
@@ -234,7 +234,7 @@ erDiagram
     meal_slot ||--o{ daily_plan : "scheduled in"
 ```
 
------
+---
 
 ## 4. Key Query Patterns (MVP1 usage)
 
@@ -282,7 +282,7 @@ WHERE category_code = (SELECT category_code FROM food_item WHERE id = :foodItemI
 AND id != :foodItemId;
 ```
 
------
+---
 
 ## 5. Migration / Versioning Note
 
@@ -290,12 +290,12 @@ AND id != :foodItemId;
 - Seed data (food_item, recipe, recipe_ingredient, recipe_composition, recipe_slot_tag) loaded from bundled JSON immediately after table creation
 - **`portion_target` and `daily_plan` must never be touched by app-update seed re-imports** — these are the only user-state tables; re-running seed scripts must be idempotent (`INSERT OR IGNORE` / check-before-insert) for reference tables only
 
------
+---
 
 ## 6. Open Items for Seed Data Phase
 
-|Item                                                  |Decision needed                                                                                                                                                   |
-|------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|UUID generation strategy for seed IDs                 |Recommend deterministic slugs (e.g., `"gallo-pinto"`, `"grain-rice-white"`) over random UUIDs — easier to debug, human-readable in JSON                           |
-|`recipe_composition` UNIQUE constraint                |Confirmed: one row per (recipe, category) — multi-contribution categories (e.g., rice contributing to GRAIN from two ingredients) must be pre-summed before insert|
-|Default `portion_target` values for onboarding (US-14)|Still pending from earlier — needed to seed first-run defaults                                                                                                    |
+| Item                                                   | Decision needed                                                                                                                                                    |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| UUID generation strategy for seed IDs                  | Recommend deterministic slugs (e.g., `"gallo-pinto"`, `"grain-rice-white"`) over random UUIDs — easier to debug, human-readable in JSON                            |
+| `recipe_composition` UNIQUE constraint                 | Confirmed: one row per (recipe, category) — multi-contribution categories (e.g., rice contributing to GRAIN from two ingredients) must be pre-summed before insert |
+| Default `portion_target` values for onboarding (US-14) | Still pending from earlier — needed to seed first-run defaults                                                                                                     |

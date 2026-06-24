@@ -2,7 +2,7 @@
 
 > Single user · Offline-first · Portion-exchange based · No meal logging
 
------
+---
 
 ## 1. Core Entities
 
@@ -10,129 +10,129 @@
 
 The foundational classification — every other entity references this.
 
-|Value      |Spanish label|Calories per portion|
-|-----------|-------------|--------------------|
-|`GRAIN`    |Harina       |80                  |
-|`FRUIT`    |Fruta        |60                  |
-|`VEGETABLE`|Vegetal      |25                  |
-|`DAIRY`    |Lácteo       |90                  |
-|`PROTEIN`  |Proteína     |55                  |
-|`FAT`      |Grasa        |45                  |
+| Value       | Spanish label | Calories per portion |
+| ----------- | ------------- | -------------------- |
+| `GRAIN`     | Harina        | 80                   |
+| `FRUIT`     | Fruta         | 60                   |
+| `VEGETABLE` | Vegetal       | 25                   |
+| `DAIRY`     | Lácteo        | 90                   |
+| `PROTEIN`   | Proteína      | 55                   |
+| `FAT`       | Grasa         | 45                   |
 
------
+---
 
 ### FoodItem
 
 Represents a single entry from the exchange list.
 
-|Field               |Type        |Notes                                           |
-|--------------------|------------|------------------------------------------------|
-|`id`                |string/int  |PK                                              |
-|`name`              |string      |Spanish (source data)                           |
-|`category`          |FoodCategory|FK to enum                                      |
-|`portionQuantity`   |string      |e.g., "1/3", "1"                                |
-|`portionUnit`       |string      |e.g., "taza", "unidad"                          |
-|`caloriesPerPortion`|int         |Denormalized from FoodCategory for display speed|
+| Field                | Type         | Notes                                            |
+| -------------------- | ------------ | ------------------------------------------------ |
+| `id`                 | string/int   | PK                                               |
+| `name`               | string       | Spanish (source data)                            |
+| `category`           | FoodCategory | FK to enum                                       |
+| `portionQuantity`    | string       | e.g., "1/3", "1"                                 |
+| `portionUnit`        | string       | e.g., "taza", "unidad"                           |
+| `caloriesPerPortion` | int          | Denormalized from FoodCategory for display speed |
 
 - Read-only in MVP1 (~150 seeded items)
 
------
+---
 
 ### PortionTarget
 
 The user's current nutritionist-defined plan. Exactly **6 records**, one per FoodCategory.
 
-|Field          |Type        |Notes                     |
-|---------------|------------|--------------------------|
-|`id`           |string/int  |PK                        |
-|`category`     |FoodCategory|FK to enum, unique        |
-|`dailyPortions`|decimal     |User/nutritionist editable|
+| Field           | Type         | Notes                      |
+| --------------- | ------------ | -------------------------- |
+| `id`            | string/int   | PK                         |
+| `category`      | FoodCategory | FK to enum, unique         |
+| `dailyPortions` | decimal      | User/nutritionist editable |
 
 - `totalDailyCalories` is **derived**, never stored:
   `Σ (dailyPortions × caloriesPerPortion)` across all 6 categories
 
------
+---
 
 ### Recipe
 
 A catalog entry. Read-only seed data in MVP1 (~24 recipes).
 
-|Field                 |Type      |Notes                                  |
-|----------------------|----------|---------------------------------------|
-|`id`                  |string/int|PK                                     |
-|`nameEs`              |string    |Display name (Spanish)                 |
-|`nameEn`              |string    |Reference/dev name (English)           |
-|`method`              |text      |Preparation steps                      |
-|`isVegetarian`        |boolean   |                                       |
-|`isVegetarianOptional`|boolean   |True if vegetarian when meat is omitted|
+| Field                  | Type       | Notes                                   |
+| ---------------------- | ---------- | --------------------------------------- |
+| `id`                   | string/int | PK                                      |
+| `nameEs`               | string     | Display name (Spanish)                  |
+| `nameEn`               | string     | Reference/dev name (English)            |
+| `method`               | text       | Preparation steps                       |
+| `isVegetarian`         | boolean    |                                         |
+| `isVegetarianOptional` | boolean    | True if vegetarian when meat is omitted |
 
------
+---
 
 ### RecipeIngredient
 
 Ingredients belonging to a recipe.
 
-|Field        |Type                       |Notes                                                                  |
-|-------------|---------------------------|-----------------------------------------------------------------------|
-|`id`         |string/int                 |PK                                                                     |
-|`recipeId`   |FK → Recipe                |                                                                       |
-|`foodItemId` |FK → FoodItem, **nullable**|Null if ingredient isn't in exchange list (e.g., Salsa Lizano, achiote)|
-|`description`|string                     |Free text, always present (display fallback)                           |
-|`quantity`   |string                     |e.g., "½"                                                              |
-|`unit`       |string                     |e.g., "taza"                                                           |
+| Field         | Type                        | Notes                                                                   |
+| ------------- | --------------------------- | ----------------------------------------------------------------------- |
+| `id`          | string/int                  | PK                                                                      |
+| `recipeId`    | FK → Recipe                 |                                                                         |
+| `foodItemId`  | FK → FoodItem, **nullable** | Null if ingredient isn't in exchange list (e.g., Salsa Lizano, achiote) |
+| `description` | string                      | Free text, always present (display fallback)                            |
+| `quantity`    | string                      | e.g., "½"                                                               |
+| `unit`        | string                      | e.g., "taza"                                                            |
 
------
+---
 
 ### RecipeComposition
 
 The portion breakdown of a recipe (e.g., "2 Grains + 3 Proteins + 1 Vegetable").
 
-|Field         |Type        |Notes                        |
-|--------------|------------|-----------------------------|
-|`id`          |string/int  |PK                           |
-|`recipeId`    |FK → Recipe |                             |
-|`category`    |FoodCategory|FK to enum                   |
-|`portionValue`|decimal     |Can be fractional (e.g., 0.5)|
+| Field          | Type         | Notes                         |
+| -------------- | ------------ | ----------------------------- |
+| `id`           | string/int   | PK                            |
+| `recipeId`     | FK → Recipe  |                               |
+| `category`     | FoodCategory | FK to enum                    |
+| `portionValue` | decimal      | Can be fractional (e.g., 0.5) |
 
 - One row **per category** the recipe contributes to
 - A recipe can have multiple rows — e.g., beans → one `GRAIN` row + one `PROTEIN` row (see Domain Rules)
 
------
+---
 
 ### MealSlot (enum)
 
-|Value            |Spanish reference|
-|-----------------|-----------------|
-|`BREAKFAST`      |Desayuno         |
-|`MORNING_SNACK`  |Merienda AM      |
-|`LUNCH`          |Almuerzo         |
-|`AFTERNOON_SNACK`|Merienda PM      |
-|`DINNER`         |Cena             |
+| Value             | Spanish reference |
+| ----------------- | ----------------- |
+| `BREAKFAST`       | Desayuno          |
+| `MORNING_SNACK`   | Merienda AM       |
+| `LUNCH`           | Almuerzo          |
+| `AFTERNOON_SNACK` | Merienda PM       |
+| `DINNER`          | Cena              |
 
------
+---
 
 ### RecipeSlotTag
 
 Links a recipe to one or more meal slots (supports multi-slot recipes like Gallo Pinto).
 
-|Field     |Type       |Notes     |
-|----------|-----------|----------|
-|`id`      |string/int |PK        |
-|`recipeId`|FK → Recipe|          |
-|`mealSlot`|MealSlot   |FK to enum|
+| Field      | Type        | Notes      |
+| ---------- | ----------- | ---------- |
+| `id`       | string/int  | PK         |
+| `recipeId` | FK → Recipe |            |
+| `mealSlot` | MealSlot    | FK to enum |
 
------
+---
 
 ### DailyPlan
 
 Today's suggested/swapped recipe per slot. Single active record, no history in MVP1.
 
-|Field            |Type                   |Notes                                              |
-|-----------------|-----------------------|---------------------------------------------------|
-|`date`           |date                   |PK (one record per day; overwritten on date change)|
-|`slotAssignments`|Map<MealSlot, recipeId>|Stored as 5 rows or JSON blob                      |
+| Field             | Type                    | Notes                                               |
+| ----------------- | ----------------------- | --------------------------------------------------- |
+| `date`            | date                    | PK (one record per day; overwritten on date change) |
+| `slotAssignments` | Map<MealSlot, recipeId> | Stored as 5 rows or JSON blob                       |
 
------
+---
 
 ## 2. Entity Relationship Diagram
 
@@ -215,7 +215,7 @@ erDiagram
     Recipe ||--o{ DailyPlan : "suggested as"
 ```
 
------
+---
 
 ## 3. Relationship Overview Diagram (simplified flow)
 
@@ -246,7 +246,7 @@ flowchart TD
     style CAL fill:#fff4e0,stroke:#c9962f,stroke-dasharray: 5 5
 ```
 
------
+---
 
 ## 4. Domain Rules — Detailed
 
@@ -263,7 +263,7 @@ RecipeComposition { recipeId: "gallo-pinto", category: PROTEIN, portionValue: 1 
 
 **Why this matters**: If this rule is skipped, every bean-based dish (the backbone of Costa Rican cuisine — gallo pinto, casado, sopa negra) will under-report protein content by ~1 full exchange. The data model handles this naturally because `RecipeComposition` already supports multiple rows per recipe — no conditional logic needed in application code.
 
------
+---
 
 ### Rule 2: Calories Are Always Derived, Never Stored as Input
 
@@ -282,7 +282,7 @@ totalDailyCalories = Σ over all 6 categories (dailyPortions[category] × calori
 - If `PortionTarget` changes (US-03), the calorie display updates automatically with zero additional persistence logic
 - Future MVPs that add calorie-based features (e.g., weekly summaries) compute from the same single source of truth
 
------
+---
 
 ### Rule 3: Recipe Matching Is Non-Strict in MVP1
 
@@ -294,7 +294,7 @@ totalDailyCalories = Σ over all 6 categories (dailyPortions[category] × calori
 - Avoids building a constraint-satisfaction/recommendation engine prematurely (this was flagged as a major scope risk in initial analysis)
 - `RecipeComposition` data is still captured now so that **MVP2+ can add portion-aware filtering later without re-modeling** — the data exists, only the query logic needs to change
 
------
+---
 
 ### Rule 4: FoodItem and Recipe Are Immutable Seed Data
 
@@ -306,12 +306,12 @@ totalDailyCalories = Σ over all 6 categories (dailyPortions[category] × calori
 - `PortionTarget` is the **only** user-mutable nutritional configuration — keeps the mutable surface area small and well-defined
 - **Risk flagged for future MVPs**: if user-editable recipes/food items are introduced later, this will require versioning or a "custom vs. seed" distinction to avoid overwriting user data on app updates that refresh seed data
 
------
+---
 
 ## 5. Open Items Carried to Schema Phase
 
-|Item                                           |Recommendation                                                                                        |Status              |
-|-----------------------------------------------|------------------------------------------------------------------------------------------------------|--------------------|
-|`RecipeIngredient.foodItemId` nullability      |Nullable + free-text `description` fallback for non-exchange ingredients (Salsa Lizano, achiote, etc.)|Pending confirmation|
-|`DailyPlan` persistence across same-day reopens|Persist in SQLite as a single row per date, overwrite on date change                                  |Recommended default |
-|ID strategy (UUID vs autoincrement)            |Low risk for local SQLite — defer to schema phase                                                     |Open                |
+| Item                                            | Recommendation                                                                                         | Status               |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------- |
+| `RecipeIngredient.foodItemId` nullability       | Nullable + free-text `description` fallback for non-exchange ingredients (Salsa Lizano, achiote, etc.) | Pending confirmation |
+| `DailyPlan` persistence across same-day reopens | Persist in SQLite as a single row per date, overwrite on date change                                   | Recommended default  |
+| ID strategy (UUID vs autoincrement)             | Low risk for local SQLite — defer to schema phase                                                      | Open                 |

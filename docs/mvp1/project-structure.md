@@ -99,14 +99,14 @@ nutrition-app/
 
 ## 2. Layer Responsibilities
 
-| Layer | Responsibility | Depends on |
-|---|---|---|
-| `domain/` | Entities, enums, business rules — pure TypeScript, zero React/SQLite imports | nothing |
-| `data/db/` | SQLite connection, schema execution, seed import | `domain/` (types only) |
-| `data/repositories/` | CRUD/query functions, one per aggregate root | `data/db/`, `domain/` |
-| `store/` | App state, calls repositories, exposes state to UI | `data/repositories/` |
-| `components/` | Presentational + light interaction logic | `store/`, `domain/` (types) |
-| `app/` | Screens — composition of components, routing only | `components/`, `store/` |
+| Layer                | Responsibility                                                               | Depends on                  |
+| -------------------- | ---------------------------------------------------------------------------- | --------------------------- |
+| `domain/`            | Entities, enums, business rules — pure TypeScript, zero React/SQLite imports | nothing                     |
+| `data/db/`           | SQLite connection, schema execution, seed import                             | `domain/` (types only)      |
+| `data/repositories/` | CRUD/query functions, one per aggregate root                                 | `data/db/`, `domain/`       |
+| `store/`             | App state, calls repositories, exposes state to UI                           | `data/repositories/`        |
+| `components/`        | Presentational + light interaction logic                                     | `store/`, `domain/` (types) |
+| `app/`               | Screens — composition of components, routing only                            | `components/`, `store/`     |
 
 **Rule**: `domain/` never imports from `data/`, `store/`, or `app/` — this keeps business rules (beans dual-count, calorie derivation) testable in isolation, independent of SQLite or React Native.
 
@@ -154,14 +154,14 @@ This directly implements the `CheckFirst` decision node from the screen flow mer
 
 ## 5. Traceability — Design Docs → Code
 
-| Design artifact | Code location |
-|---|---|
-| Domain entities (domain-model.md) | `src/domain/entities/` |
-| Domain Rules 1–4 | `src/domain/rules/` |
-| SQLite DDL (data-schema.md) | `src/data/db/schema.sql` |
-| Seed JSON format (seed-data-format.md) | `src/data/seed/*.json` |
-| Screen flow nodes (screen-flow.md) | `app/` routes (1:1 mapping) |
-| User stories acceptance criteria | Component-level — enforced in `components/` + `hooks/` |
+| Design artifact                        | Code location                                          |
+| -------------------------------------- | ------------------------------------------------------ |
+| Domain entities (domain-model.md)      | `src/domain/entities/`                                 |
+| Domain Rules 1–4                       | `src/domain/rules/`                                    |
+| SQLite DDL (data-schema.md)            | `src/data/db/schema.sql`                               |
+| Seed JSON format (seed-data-format.md) | `src/data/seed/*.json`                                 |
+| Screen flow nodes (screen-flow.md)     | `app/` routes (1:1 mapping)                            |
+| User stories acceptance criteria       | Component-level — enforced in `components/` + `hooks/` |
 
 ---
 
