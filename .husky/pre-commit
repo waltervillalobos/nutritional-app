@@ -10,7 +10,7 @@ npm run typecheck || exit 1
 npm run test -- --passWithNoTests || exit 1
 
 # 4. Domain layer boundary enforcement
-sh scripts/check-domain-boundaries.sh || exit 1
+node scripts/check-domain-boundaries.js || exit 1
 
 # 5. Seed JSON schema validation
 node scripts/validate-seed-json.js || exit 1
