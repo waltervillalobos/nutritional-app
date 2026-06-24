@@ -5,7 +5,7 @@ module.exports = defineConfig([
   ...expoConfig,
   {
     settings: {
-      react: { version: '18.3.1' },
+      react: { version: '19.1.0' },
     },
     rules: {
       'no-console': 'warn',

@@ -117,16 +117,16 @@ nutrition-app/
 ```json
 {
   "dependencies": {
-    "expo": "~56.x",
-    "expo-router": "~56.x",
-    "expo-sqlite": "~56.x",
-    "react-native": "0.85.x",
+    "expo": "~54.x",
+    "expo-router": "~6.x",
+    "expo-sqlite": "~16.x",
+    "react-native": "0.81.x",
     "zustand": "^5.x",
     "@gorhom/bottom-sheet": "^5.x"
   },
   "devDependencies": {
-    "typescript": "^6.x",
-    "@types/react": "^18.x"
+    "typescript": "~5.9.x",
+    "@types/react": "~19.x"
   }
 }
 ```

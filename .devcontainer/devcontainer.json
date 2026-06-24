@@ -11,8 +11,9 @@
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
 
-  // Install JS dependencies after the container is created (unprivileged).
-  "postCreateCommand": "npm install",
+  // Install JS dependencies, reconcile Expo SDK versions, then install Claude Code
+  // globally so the `claude` CLI is available in the terminal.
+  "postCreateCommand": "npm install && npx expo install && npm install -g @anthropic-ai/claude-code",
 
   // Metro / Expo web dev server. Not made public — forwarded privately to the user.
   "forwardPorts": [8081, 19006],
@@ -25,6 +26,9 @@
     // Reduce outbound telemetry from the Expo CLI.
     "EXPO_NO_TELEMETRY": "1",
     "EXPO_USE_DEV_SERVER": "true"
+    // ANTHROPIC_API_KEY is required for Claude Code. Never commit it here —
+    // add it as a Codespaces encrypted secret:
+    // GitHub → repo Settings → Secrets and variables → Codespaces → New secret → ANTHROPIC_API_KEY
   },
 
   "customizations": {
@@ -33,7 +37,8 @@
         "expo.vscode-expo-tools",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "orta.vscode-jest"
+        "orta.vscode-jest",
+        "anthropic.claude-code"
       ],
       "settings": {
         "editor.formatOnSave": true,
