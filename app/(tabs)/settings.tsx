@@ -1,10 +1,7 @@
 import { Alert, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { router } from 'expo-router';
 import { FOOD_CATEGORIES } from '../../src/domain/entities/PortionTarget';
-import {
-  selectDailyCalories,
-  usePortionTargetStore,
-} from '../../src/store/usePortionTargetStore';
+import { selectDailyCalories, usePortionTargetStore } from '../../src/store/usePortionTargetStore';
 import { CalorieDisplay } from '../../src/components/CalorieDisplay';
 import { PortionTargetField } from '../../src/components/PortionTargetField';
 
@@ -49,9 +46,7 @@ export default function SettingsScreen() {
         disabled={status === 'saving'}
         accessibilityRole="button"
       >
-        <Text style={styles.saveButtonText}>
-          {status === 'saving' ? 'Guardando…' : 'Guardar'}
-        </Text>
+        <Text style={styles.saveButtonText}>{status === 'saving' ? 'Guardando…' : 'Guardar'}</Text>
       </TouchableOpacity>
     </ScrollView>
   );

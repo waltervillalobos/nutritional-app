@@ -1,10 +1,7 @@
 import { create } from 'zustand';
 import { FoodCategory } from '../domain/entities/FoodCategory';
 import { toDailyPortions } from '../domain/entities/PortionTarget';
-import {
-  calculateDailyCalories,
-  type DailyPortions,
-} from '../domain/rules/calculateDailyCalories';
+import { calculateDailyCalories, type DailyPortions } from '../domain/rules/calculateDailyCalories';
 import {
   sqlitePortionTargetRepository,
   type PortionTargetRepository,
@@ -47,9 +44,7 @@ export function createPortionTargetStore(
     },
 
     setPortion(category, dailyPortions) {
-      const sanitized = Number.isFinite(dailyPortions)
-        ? Math.max(0, dailyPortions)
-        : 0;
+      const sanitized = Number.isFinite(dailyPortions) ? Math.max(0, dailyPortions) : 0;
       set((state) => ({ targets: { ...state.targets, [category]: sanitized } }));
     },
 

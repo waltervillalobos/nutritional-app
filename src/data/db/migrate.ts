@@ -19,9 +19,7 @@ const SCHEMA_VERSION = 1;
 export async function bootstrapDatabase(): Promise<void> {
   const db = await getDatabase();
 
-  const result = await db.getFirstAsync<{ user_version: number }>(
-    'PRAGMA user_version',
-  );
+  const result = await db.getFirstAsync<{ user_version: number }>('PRAGMA user_version');
   const currentVersion = result?.user_version ?? 0;
 
   if (currentVersion >= SCHEMA_VERSION) {

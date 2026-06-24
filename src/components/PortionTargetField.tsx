@@ -13,11 +13,7 @@ interface PortionTargetFieldProps {
  * of portion-input UI, reused for every category row (and reusable by a future
  * onboarding step), so the input behaviour is never duplicated (DRY).
  */
-export function PortionTargetField({
-  category,
-  dailyPortions,
-  onChange,
-}: PortionTargetFieldProps) {
+export function PortionTargetField({ category, dailyPortions, onChange }: PortionTargetFieldProps) {
   const handleChangeText = (text: string) => {
     const normalized = text.replace(',', '.');
     const parsed = Number.parseFloat(normalized);

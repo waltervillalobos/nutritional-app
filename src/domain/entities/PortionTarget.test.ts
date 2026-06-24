@@ -1,9 +1,5 @@
 import { FoodCategory } from './FoodCategory';
-import {
-  createPortionTarget,
-  portionTargetId,
-  toDailyPortions,
-} from './PortionTarget';
+import { createPortionTarget, portionTargetId, toDailyPortions } from './PortionTarget';
 
 describe('PortionTarget', () => {
   it('derives a deterministic slug id per category', () => {

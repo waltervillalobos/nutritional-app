@@ -36,14 +36,9 @@ export function portionTargetId(category: FoodCategory): string {
  * Builds a PortionTarget, enforcing the same non-negative invariant as the
  * `daily_portions >= 0` CHECK in the database schema.
  */
-export function createPortionTarget(
-  category: FoodCategory,
-  dailyPortions: number,
-): PortionTarget {
+export function createPortionTarget(category: FoodCategory, dailyPortions: number): PortionTarget {
   if (!Number.isFinite(dailyPortions) || dailyPortions < 0) {
-    throw new RangeError(
-      `dailyPortions must be a finite number >= 0, received: ${dailyPortions}`,
-    );
+    throw new RangeError(`dailyPortions must be a finite number >= 0, received: ${dailyPortions}`);
   }
   return { id: portionTargetId(category), category, dailyPortions };
 }

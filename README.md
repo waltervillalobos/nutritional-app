@@ -39,9 +39,11 @@ pre-configured). See [`.devcontainer/README.md`](.devcontainer/README.md) for de
 **Prerequisites:** [Node.js 20 LTS](https://nodejs.org/) and npm.
 
 > **iOS simulator (macOS only):** Before running `npx expo start`, you must accept the Xcode license once:
+>
 > ```bash
 > sudo xcodebuild -license
 > ```
+>
 > Scroll to the end of the license and type `agree`. This is only required the first time.
 
 ```bash
@@ -58,6 +60,8 @@ npm test
 
 ### Available commands
 
+All commands below use `npm run <name>` — they are defined in `package.json` scripts and run locally installed tools. Use `npx <tool>` only for one-off tools not listed here (e.g. `npx expo install <package>`).
+
 | Command                | What it does                                                             |
 | ---------------------- | ------------------------------------------------------------------------ |
 | `npm install`          | Install all dependencies (also activates pre-commit hooks via `husky`)   |
@@ -66,10 +70,12 @@ npm test
 | `npm run typecheck`    | Type-check the project (`tsc --noEmit`)                                  |
 | `npm run lint`         | Lint all TypeScript files with ESLint                                    |
 | `npm run lint:fix`     | Auto-fix ESLint violations                                               |
-| `npm run format`       | Format all files with Prettier                                           |
-| `npm run format:check` | Check formatting without writing (same as pre-commit)                    |
+| `npm run format`       | Format all files with Prettier (`--write`)                               |
+| `npm run format:check` | Check formatting without writing (used in pre-commit and CI)             |
 | `npm run web`          | Start the Expo web preview (port **8081**)                               |
 | `npm run tunnel`       | Start Expo with a tunnel — scan the QR code with **Expo Go** on a device |
+
+> **Code style errors?** Run `npm run format` to auto-fix all Prettier issues in one shot.
 
 ### Pre-commit hooks
 
@@ -81,7 +87,7 @@ Every commit is automatically checked by a [Husky](https://typicode.github.io/hu
 | Linting             | `eslint --max-warnings=0`            | Staged `.ts`, `.tsx` files                 |
 | Type safety         | `tsc --noEmit`                       | Entire project                             |
 | Unit tests          | `jest --passWithNoTests`             | `src/**/*.test.ts(x)`                      |
-| Domain boundaries   | `scripts/check-domain-boundaries.sh` | `src/domain/**`                            |
+| Domain boundaries   | `scripts/check-domain-boundaries.js` | `src/domain/**`                            |
 | Seed JSON integrity | `scripts/validate-seed-json.js`      | `docs/mvp1/` and `src/data/seed/`          |
 
 **Dev dependencies added for this setup:**

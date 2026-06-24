@@ -2,10 +2,7 @@ import { FoodCategory } from '../domain/entities/FoodCategory';
 import { createPortionTarget, type PortionTarget } from '../domain/entities/PortionTarget';
 import type { DailyPortions } from '../domain/rules/calculateDailyCalories';
 import type { PortionTargetRepository } from '../data/repositories/portionTargetRepository';
-import {
-  createPortionTargetStore,
-  selectDailyCalories,
-} from './usePortionTargetStore';
+import { createPortionTargetStore, selectDailyCalories } from './usePortionTargetStore';
 
 /** In-memory repository — proves the store works without expo-sqlite (DIP). */
 class FakePortionTargetRepository implements PortionTargetRepository {
