@@ -58,22 +58,34 @@ npm install
 npm test
 ```
 
+> **Expo version mismatch?** If `npx expo start` warns that packages are at unexpected versions, run:
+>
+> ```bash
+> npx expo install <package>@<expected-version>
+> ```
+>
+> `npx expo install` resolves the version that matches the installed Expo SDK — always use it instead of plain `npm install` for Expo SDK, React Native, and Expo-ecosystem packages.
+
 ### Available commands
 
-All commands below use `npm run <name>` — they are defined in `package.json` scripts and run locally installed tools. Use `npx <tool>` only for one-off tools not listed here (e.g. `npx expo install <package>`).
+All commands below use `npm run <name>` — they are defined in `package.json` scripts and run locally installed tools.
 
-| Command                | What it does                                                             |
-| ---------------------- | ------------------------------------------------------------------------ |
-| `npm install`          | Install all dependencies (also activates pre-commit hooks via `husky`)   |
-| `npm test`             | Run the unit tests (jest-expo)                                           |
-| `npm run test:watch`   | Run tests in watch mode                                                  |
-| `npm run typecheck`    | Type-check the project (`tsc --noEmit`)                                  |
-| `npm run lint`         | Lint all TypeScript files with ESLint                                    |
-| `npm run lint:fix`     | Auto-fix ESLint violations                                               |
-| `npm run format`       | Format all files with Prettier (`--write`)                               |
-| `npm run format:check` | Check formatting without writing (used in pre-commit and CI)             |
-| `npm run web`          | Start the Expo web preview (port **8081**)                               |
-| `npm run tunnel`       | Start Expo with a tunnel — scan the QR code with **Expo Go** on a device |
+- Use `npm install` for non-Expo packages (linters, test utilities, etc.)
+- Use `npx expo install <package>` for any Expo SDK, React Native, or Expo-ecosystem package — it pins the version to what the installed Expo SDK expects.
+
+| Command                      | What it does                                                                      |
+| ---------------------------- | --------------------------------------------------------------------------------- |
+| `npm install`                | Install all dependencies (also activates pre-commit hooks via `husky`)            |
+| `npx expo install <package>` | Install an Expo-compatible package version (use for RN / Expo ecosystem packages) |
+| `npm test`                   | Run the unit tests (jest-expo)                                                    |
+| `npm run test:watch`         | Run tests in watch mode                                                           |
+| `npm run typecheck`          | Type-check the project (`tsc --noEmit`)                                           |
+| `npm run lint`               | Lint all TypeScript files with ESLint                                             |
+| `npm run lint:fix`           | Auto-fix ESLint violations                                                        |
+| `npm run format`             | Format all files with Prettier (`--write`)                                        |
+| `npm run format:check`       | Check formatting without writing (used in pre-commit and CI)                      |
+| `npm run web`                | Start the Expo web preview (port **8081**)                                        |
+| `npm run tunnel`             | Start Expo with a tunnel — scan the QR code with **Expo Go** on a device          |
 
 > **Code style errors?** Run `npm run format` to auto-fix all Prettier issues in one shot.
 
