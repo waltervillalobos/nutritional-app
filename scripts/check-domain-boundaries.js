@@ -11,8 +11,7 @@ if (!fs.existsSync(DOMAIN_DIR)) {
   process.exit(0);
 }
 
-const VIOLATION_PATTERN =
-  /from\s+['"](?:(?:\.\.\/)+(?:data|store|app)\/|@\/(?:data|store|app)\/)/;
+const VIOLATION_PATTERN = /from\s+['"](?:(?:\.\.\/)+(?:data|store|app)\/|@\/(?:data|store|app)\/)/;
 
 function collectFiles(dir) {
   const results = [];
@@ -39,7 +38,9 @@ for (const file of collectFiles(DOMAIN_DIR)) {
 }
 
 if (violations.length > 0) {
-  console.error('\nDomain boundary violation: src/domain/ must not import from data/, store/, or app/\n');
+  console.error(
+    '\nDomain boundary violation: src/domain/ must not import from data/, store/, or app/\n',
+  );
   violations.forEach((v) => console.error(' ', v));
   console.error('');
   process.exit(1);

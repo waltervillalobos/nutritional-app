@@ -7,7 +7,14 @@ const path = require('path');
 
 const SEED_DIRS = ['docs/mvp1', 'src/data/seed'];
 
-const FOOD_ITEM_REQUIRED = ['id', 'name', 'category', 'portionQuantity', 'portionUnit', 'caloriesPerPortion'];
+const FOOD_ITEM_REQUIRED = [
+  'id',
+  'name',
+  'category',
+  'portionQuantity',
+  'portionUnit',
+  'caloriesPerPortion',
+];
 const RECIPE_REQUIRED = ['id', 'nameEs', 'slots', 'ingredients', 'composition'];
 const VALID_CATEGORIES = ['GRAIN', 'FRUIT', 'VEGETABLE', 'DAIRY', 'PROTEIN', 'FAT'];
 const VALID_SLOTS = ['BREAKFAST', 'MORNING_SNACK', 'LUNCH', 'AFTERNOON_SNACK', 'DINNER'];
@@ -27,7 +34,9 @@ function validateFoodItems(filePath, items) {
       }
     });
     if (item.category && !VALID_CATEGORIES.includes(item.category)) {
-      errors.push(`${ref}: invalid category "${item.category}" — must be one of ${VALID_CATEGORIES.join(', ')}`);
+      errors.push(
+        `${ref}: invalid category "${item.category}" — must be one of ${VALID_CATEGORIES.join(', ')}`,
+      );
     }
   });
 }

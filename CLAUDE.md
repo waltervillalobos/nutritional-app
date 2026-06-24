@@ -12,15 +12,15 @@ Current phase: MVP1 design complete, pre-code.
 
 ## Tech Stack
 
-| Layer       | Technology                              |
-|-------------|-----------------------------------------|
-| Runtime     | React Native 0.85.x + Expo 56.x (managed workflow) |
-| Routing     | expo-router ~56.x (file-based)          |
-| Database    | expo-sqlite ~56.x (SQLite, local-only)  |
-| State       | Zustand ^5.x                            |
-| Bottom sheet| @gorhom/bottom-sheet ^5.x (US-06 swap) |
-| Platform    | iOS + Android                           |
-| Language    | TypeScript ^6.x                         |
+| Layer        | Technology                                         |
+| ------------ | -------------------------------------------------- |
+| Runtime      | React Native 0.85.x + Expo 56.x (managed workflow) |
+| Routing      | expo-router ~56.x (file-based)                     |
+| Database     | expo-sqlite ~56.x (SQLite, local-only)             |
+| State        | Zustand ^5.x                                       |
+| Bottom sheet | @gorhom/bottom-sheet ^5.x (US-06 swap)             |
+| Platform     | iOS + Android                                      |
+| Language     | TypeScript ^6.x                                    |
 
 > Note: the repo's `.gitignore` is Xcode-origin from the initial template and will be replaced once the Expo scaffold is initialized.
 
@@ -74,23 +74,23 @@ Full layout and traceability table: `docs/mvp1/project-structure.md`
 
 Code identifiers and entity names use **English**. Food names, recipe names, and ingredient names remain in **Spanish** (source data).
 
-| English (code)   | Spanish (display) | kcal/portion |
-|------------------|-------------------|--------------|
-| `GRAIN`          | Harina            | 80           |
-| `FRUIT`          | Fruta             | 60           |
-| `VEGETABLE`      | Vegetal           | 25           |
-| `DAIRY`          | Lácteo            | 90           |
-| `PROTEIN`        | Proteína          | 55           |
-| `FAT`            | Grasa             | 45           |
+| English (code) | Spanish (display) | kcal/portion |
+| -------------- | ----------------- | ------------ |
+| `GRAIN`        | Harina            | 80           |
+| `FRUIT`        | Fruta             | 60           |
+| `VEGETABLE`    | Vegetal           | 25           |
+| `DAIRY`        | Lácteo            | 90           |
+| `PROTEIN`      | Proteína          | 55           |
+| `FAT`          | Grasa             | 45           |
 
-| Term               | Meaning                                                                    |
-|--------------------|----------------------------------------------------------------------------|
-| Exchange / Portion | One standard serving from the exchange list (Intercambio / Porción)        |
+| Term               | Meaning                                                                     |
+| ------------------ | --------------------------------------------------------------------------- |
+| Exchange / Portion | One standard serving from the exchange list (Intercambio / Porción)         |
 | PortionTarget      | User's daily quota per FoodCategory — the only user-editable nutrition data |
-| DailyPlan          | Today's recipe assignment per MealSlot; no history in MVP1                 |
-| RecipeComposition  | Per-category exchange count for a recipe (e.g., 2 GRAIN + 1 PROTEIN)      |
-| RecipeSlotTag      | Tag linking a recipe to one or more MealSlots                              |
-| MealSlot           | Enum: BREAKFAST · MORNING_SNACK · LUNCH · AFTERNOON_SNACK · DINNER        |
+| DailyPlan          | Today's recipe assignment per MealSlot; no history in MVP1                  |
+| RecipeComposition  | Per-category exchange count for a recipe (e.g., 2 GRAIN + 1 PROTEIN)        |
+| RecipeSlotTag      | Tag linking a recipe to one or more MealSlots                               |
+| MealSlot           | Enum: BREAKFAST · MORNING_SNACK · LUNCH · AFTERNOON_SNACK · DINNER          |
 
 ---
 
@@ -119,6 +119,7 @@ These are the decisions most likely to be implemented incorrectly:
 - `food-items.json` and `recipes.json` in `docs/mvp1/` are design artifacts; they will move to `src/data/seed/` when the Expo scaffold is initialized.
 
 **First-launch boot sequence** (implemented in `app/_layout.tsx`):
+
 ```
 → Has schema been run?  NO  → run schema.sql + import seed → /onboarding/welcome
                         YES → Does portion_target have rows?

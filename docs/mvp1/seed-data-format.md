@@ -2,7 +2,7 @@
 
 > Source: exchange list (~150 items) + recipe catalog (24 recipes) · Target: bundled JSON → SQLite import on first launch · Derived from: Data Schema (mvp1-data-schema.md)
 
------
+---
 
 ## 1. Design Principles
 
@@ -11,7 +11,7 @@
 - **Two independent files** — `food-items.json` and `recipes.json` — since they update on different cadences (food DB is stable; recipes will grow first)
 - **Beans dual-count and multi-slot tagging are explicit in the file**, not inferred at import time — keeps import logic trivial (straight insert, no business rules at load time)
 
------
+---
 
 ## 2. File: `food-items.json`
 
@@ -85,7 +85,7 @@
 - `category` must be one of the 6 enum values exactly (validated at import)
 - `caloriesPerPortion` is denormalized from `food_category` but stored per-item for display speed — **must match** the category's fixed value (validation rule, not a free value)
 
------
+---
 
 ## 3. File: `recipes.json`
 
@@ -191,7 +191,7 @@
 - `ingredients[].foodItemId` — `null` when ingredient isn't in the exchange list (Salsa Lizano, achiote, etc.); `description` is always required regardless
 - `composition` array — **one entry per category max** (matches `UNIQUE(recipe_id, category_code)` schema constraint); beans dual-count shown explicitly as separate GRAIN + PROTEIN entries within the same array — see Gallo Pinto example above (1 PROTEIN entry already includes the beans contribution)
 
------
+---
 
 ## 4. Import Process (first launch)
 
@@ -210,7 +210,7 @@
 
 **Idempotency rule**: import script checks `SELECT COUNT(*) FROM food_item` before running — if seed tables already populated, skip (prevents duplicate inserts on app restart, never re-runs against user data tables `portion_target`/`daily_plan`).
 
------
+---
 
 ## 5. Update/Versioning Strategy
 
@@ -218,12 +218,12 @@
 - Recipe catalog growth (beyond initial 24) = append to `recipes.json`, no schema change needed
 - Food database expansion (beyond vegetarian-focused ~150 items) = append to `food-items.json`, same mechanism — validates the schema decision to keep food DB generic/expandable
 
------
+---
 
 ## 6. Open Items for Development Phase
 
-|Item                           |Note                                                                                                                                             |
-|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-|Full 150-item `food-items.json`|This doc shows format + 7 sample entries; full transcription from exchange list PDF is a data-entry task, not a design task                      |
-|Full 24-recipe `recipes.json`  |This doc shows format + 2 worked examples (incl. beans dual-count); remaining 22 recipes from prior research need conversion to this exact format|
-|Composition value validation   |Recommend a lightweight script to sum `composition[].portionValue` per recipe and sanity-check against ingredient quantities before shipping     |
+| Item                            | Note                                                                                                                                              |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Full 150-item `food-items.json` | This doc shows format + 7 sample entries; full transcription from exchange list PDF is a data-entry task, not a design task                       |
+| Full 24-recipe `recipes.json`   | This doc shows format + 2 worked examples (incl. beans dual-count); remaining 22 recipes from prior research need conversion to this exact format |
+| Composition value validation    | Recommend a lightweight script to sum `composition[].portionValue` per recipe and sanity-check against ingredient quantities before shipping      |

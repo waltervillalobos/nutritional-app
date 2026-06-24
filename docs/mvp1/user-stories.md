@@ -2,25 +2,24 @@
 
 > Single user · Offline-first · iOS/Android · No meal logging · Planning/suggestion only
 
------
+---
 
 ## Domain Terminology Reference
 
-|English (domain/code)|Spanish (data/display)|
-|---------------------|----------------------|
-|Grain / Carbohydrate |Harina                |
-|Fruit                |Fruta                 |
-|Vegetable            |Vegetal               |
-|Dairy                |Lácteo                |
-|Protein              |Proteína              |
-|Fat                  |Grasa                 |
-|Exchange List        |(replaces "CNC list") |
-|Exchange / Portion   |Porción / Intercambio |
-
+| English (domain/code) | Spanish (data/display) |
+| --------------------- | ---------------------- |
+| Grain / Carbohydrate  | Harina                 |
+| Fruit                 | Fruta                  |
+| Vegetable             | Vegetal                |
+| Dairy                 | Lácteo                 |
+| Protein               | Proteína               |
+| Fat                   | Grasa                  |
+| Exchange List         | (replaces "CNC list")  |
+| Exchange / Portion    | Porción / Intercambio  |
 
 > Rule: domain entities, enums, and code identifiers use English. Recipe names, ingredient names, and food item names remain in Spanish (source data).
 
------
+---
 
 ## Feature Area 1: User Profile & Portion Configuration
 
@@ -51,7 +50,7 @@
   - Change reflected immediately in daily plan view
 - **Priority: MUST**
 
------
+---
 
 ## Feature Area 2: Daily Meal Plan View
 
@@ -92,7 +91,7 @@
   - No raw macro numbers in MVP1 (portions only)
 - **Priority: MUST**
 
------
+---
 
 ## Feature Area 3: Recipe Catalog
 
@@ -122,7 +121,7 @@
   - Filter persists during session (not necessarily across restarts in MVP1)
 - **Priority: SHOULD**
 
------
+---
 
 ## Feature Area 4: Food Database
 
@@ -153,7 +152,7 @@
   - Supports the exchange principle (e.g., swap ⅓ cup rice for ½ cup pasta — both 1 Grain exchange)
 - **Priority: COULD**
 
------
+---
 
 ## Feature Area 5: Onboarding
 
@@ -177,28 +176,28 @@
   - Not shown again after first launch
 - **Priority: SHOULD**
 
------
+---
 
 ## Out of Scope — MVP1 (Deferred)
 
-|Story                              |Reason deferred                    |
-|-----------------------------------|-----------------------------------|
-|Log/track meals consumed           |Explicitly excluded from MVP1 scope|
-|Multi-user / family profiles       |Single user per install confirmed  |
-|Cloud sync / backup                |No backend in MVP1                 |
-|Push notifications / meal reminders|Post-MVP1 UX enhancement           |
-|Weekly meal plan generation        |MVP1 is daily only                 |
-|Custom recipe creation by user     |Catalog is read-only in MVP1       |
-|Nutritional analytics / charts     |No logging = no data to analyze    |
-|Exercise / calorie burn tracking   |Out of nutrition planning scope    |
+| Story                               | Reason deferred                     |
+| ----------------------------------- | ----------------------------------- |
+| Log/track meals consumed            | Explicitly excluded from MVP1 scope |
+| Multi-user / family profiles        | Single user per install confirmed   |
+| Cloud sync / backup                 | No backend in MVP1                  |
+| Push notifications / meal reminders | Post-MVP1 UX enhancement            |
+| Weekly meal plan generation         | MVP1 is daily only                  |
+| Custom recipe creation by user      | Catalog is read-only in MVP1        |
+| Nutritional analytics / charts      | No logging = no data to analyze     |
+| Exercise / calorie burn tracking    | Out of nutrition planning scope     |
 
------
+---
 
 ## Story Summary
 
-|Priority    |Count|Stories                      |
-|------------|-----|-----------------------------|
-|MUST        |10   |US-01–07, US-09, US-11, US-14|
-|SHOULD      |4    |US-08, US-10, US-12, US-15   |
-|COULD       |1    |US-13                        |
-|WON'T (MVP1)|8    |See deferred table           |
+| Priority     | Count | Stories                       |
+| ------------ | ----- | ----------------------------- |
+| MUST         | 10    | US-01–07, US-09, US-11, US-14 |
+| SHOULD       | 4     | US-08, US-10, US-12, US-15    |
+| COULD        | 1     | US-13                         |
+| WON'T (MVP1) | 8     | See deferred table            |

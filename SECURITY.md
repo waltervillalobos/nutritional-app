@@ -15,10 +15,10 @@ into the shipped app binary.
 
 ## The findings
 
-| Vulnerable package | Pulled in by (chain) | Runs only during | Notes |
-|---|---|---|---|
-| `js-yaml@3.x` (quadratic-complexity DoS in merge keys — [GHSA-h67p-54hq-rp68](https://github.com/advisories/GHSA-h67p-54hq-rp68)) | `babel-plugin-istanbul` → `babel-jest` → `jest` | `jest --coverage` (local/CI) | `@istanbuljs/load-nyc-config` is unmaintained and hard-pins `js-yaml@^3`. js-yaml 4 removed `safeLoad`, so it cannot be force-upgraded without breaking Jest coverage. |
-| `uuid@7.x` (missing buffer bounds check in v3/v5/v6 when `buf` is provided — [GHSA-w5hq-g745-h8pq](https://github.com/advisories/GHSA-w5hq-g745-h8pq)) | `xcode` → `@expo/config-plugins` → `@expo/cli` → `expo` | `expo prebuild` / native project generation (local/CI) | `xcode@3.0.1` (latest) pins `uuid@^7`. Intrinsic to the Expo toolchain. |
+| Vulnerable package                                                                                                                                     | Pulled in by (chain)                                    | Runs only during                                       | Notes                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `js-yaml@3.x` (quadratic-complexity DoS in merge keys — [GHSA-h67p-54hq-rp68](https://github.com/advisories/GHSA-h67p-54hq-rp68))                      | `babel-plugin-istanbul` → `babel-jest` → `jest`         | `jest --coverage` (local/CI)                           | `@istanbuljs/load-nyc-config` is unmaintained and hard-pins `js-yaml@^3`. js-yaml 4 removed `safeLoad`, so it cannot be force-upgraded without breaking Jest coverage. |
+| `uuid@7.x` (missing buffer bounds check in v3/v5/v6 when `buf` is provided — [GHSA-w5hq-g745-h8pq](https://github.com/advisories/GHSA-w5hq-g745-h8pq)) | `xcode` → `@expo/config-plugins` → `@expo/cli` → `expo` | `expo prebuild` / native project generation (local/CI) | `xcode@3.0.1` (latest) pins `uuid@^7`. Intrinsic to the Expo toolchain.                                                                                                |
 
 Neither is exploitable in normal use of this project:
 
